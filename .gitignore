@@ -1,0 +1,19 @@
+# Ignore all CSV files
+archive/
+*.csv
+
+# Ignore cache files and logs
+__pycache__/
+Results/
+*.log
+*.json
+*.pkl
+*.joblib
+*.png
+
+# Ignore virtual environment
+venv/
+.env/
+
+# Ignore catboost_info
+catboost_info/
