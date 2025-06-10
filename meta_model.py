@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_predict
-from config import add_meta_features, meta_features, use_cv_meta_model, random_seed, use_class_weights
+from config import add_meta_features, meta_features, use_cv_meta_model, random_seed
 from trainer import evaluate_model
 
 def build_meta_inputs(predictions_dict, meta_raw, index_subset, use_meta_features):
@@ -19,7 +19,7 @@ def build_meta_inputs(predictions_dict, meta_raw, index_subset, use_meta_feature
 
     return meta_input
 
-def train_meta_model(pred_train, pred_test, y_train, y_test, train_df, test_df, class_weights):
+def train_meta_model(pred_train, pred_test, y_train, y_test, train_df, test_df):
     # Get indices to align meta features
     train_idx = y_train.index
     test_idx = y_test.index
@@ -29,10 +29,7 @@ def train_meta_model(pred_train, pred_test, y_train, y_test, train_df, test_df, 
     X_meta_test = build_meta_inputs(pred_test, test_df, test_idx, add_meta_features)
 
     # Define meta-model
-    if use_class_weights and class_weights is not None:
-        meta_model = RandomForestClassifier(n_estimators=100, random_state=random_seed, class_weight=class_weights)
-    else:
-        meta_model = RandomForestClassifier(n_estimators=100, random_state=random_seed)
+    meta_model = RandomForestClassifier(n_estimators=100, random_state=random_seed)
 
     if use_cv_meta_model:
         # Safer training: use CV predictions on train set

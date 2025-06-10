@@ -29,8 +29,8 @@ use_cross_validation = False  # For base models
 use_cv_meta_model = True      # Use cross_val_predict() for meta-model
 add_meta_features = True      # Whether to add raw packet features to meta-model
 
-use_smote = True            # Enable oversampling
 use_class_weights = False   # Enable manual weighting 
+use_smote = True  # Enable SMOTE
 
 # --- Model Settings ---
 random_seed = 42

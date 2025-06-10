@@ -28,7 +28,7 @@ def main():
 
     # Step 4: Train meta-model using base predictions
     print("Training meta-model...")
-    _ = train_meta_model(pred_train_dict, pred_test_dict, y_train, y_test, train_df, test_df, class_weights)
+    _ = train_meta_model(pred_train_dict, pred_test_dict, y_train, y_test, train_df, test_df)
 
     print("All done! Results saved to:", results_dir)
 
