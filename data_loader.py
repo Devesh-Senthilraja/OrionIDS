@@ -12,6 +12,8 @@ from config import (
     statistical_features,
     behavioral_features,
     enabled_feature_sets,
+    add_meta_features,
+    meta_features,
     test_size,
     random_seed,
     use_class_weights,
@@ -50,40 +52,28 @@ def get_train_test_data():
     #train_df = load_datasets(train_dataset_path)
     train_df = load_multiple_datasets(train_dataset_paths)
     test_df = load_dataset(test_dataset_path)
+    
+    if use_smote:
+        smote_columns = []
+        if enabled_feature_sets.get("General", False):
+            smote_columns.extend(general_features)
+        if enabled_feature_sets.get("Statistical", False):
+            smote_columns.extend(statistical_features)
+        if enabled_feature_sets.get("Behavioral", False):
+            smote_columns.extend(behavioral_features)
+        if add_meta_features:
+            for col in meta_features:
+                if col not in smote_columns:
+                    smote_columns.append(col)
+
+        smote = SMOTE(random_state=random_seed)
+
+        X_res, y_res = smote.fit_resample(train_df[smote_columns], train_df["Label"])
+        train_df = pd.DataFrame(X_res, columns=smote_columns)
+        train_df["Label"] = y_res
 
     X_train_dict, y_train = extract_features(train_df)
     X_test_dict, y_test = extract_features(test_df)
-
-    if use_smote:
-        print("Before SMOTE:", y_train.value_counts())
-        smote = SMOTE(random_state=random_seed)
-
-        # Concatenate and track column slices
-        feature_keys = list(X_train_dict.keys())
-        feature_slices = {}
-        start = 0
-        X_concat_parts = []
-
-        for key in feature_keys:
-            X_part = X_train_dict[key]
-            end = start + X_part.shape[1]
-            feature_slices[key] = (start, end)
-            X_concat_parts.append(X_part)
-            start = end
-
-        X_concat = pd.concat(X_concat_parts, axis=1)
-        X_resampled, y_resampled = smote.fit_resample(X_concat, y_train)
-
-        # Rebuild X_train_dict
-        for key in feature_keys:
-            s, e = feature_slices[key]
-            X_train_dict[key] = pd.DataFrame(
-                X_resampled[:, s:e],
-                columns=X_train_dict[key].columns
-            )
-
-        y_train = pd.Series(y_resampled).reset_index(drop=True)
-        print("After SMOTE:", y_train.value_counts())
 
     if use_class_weights:
         pos = np.sum(y_train == 1)
