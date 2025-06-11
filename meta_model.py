@@ -1,21 +1,29 @@
 # meta_model.py
 
 import numpy as np
+import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_predict
-from config import add_meta_features, meta_features, use_cv_meta_model, random_seed
+from config import add_meta_features, meta_features, use_cv_meta_model, random_seed, shap_plot_path
 from trainer import evaluate_model
+import shap
+import matplotlib.pyplot as plt
 
 def build_meta_inputs(predictions_dict, meta_raw, index_subset, use_meta_features):
     # Stack predictions from base models
-    base_preds = np.column_stack([predictions_dict[k] for k in sorted(predictions_dict.keys())])
+    pred_cols = [f"pred_{k}" for k in sorted(predictions_dict.keys())]
+    base_df = pd.DataFrame(
+        np.column_stack([predictions_dict[k] for k in sorted(predictions_dict.keys())]),
+        columns=pred_cols,
+        index=index_subset,
+    )
 
     if use_meta_features:
-        meta_additional = meta_raw.loc[index_subset, meta_features].values
-        meta_input = np.column_stack((base_preds, meta_additional))
+        meta_additional = meta_raw.loc[index_subset, meta_features]
+        meta_input = pd.concat([base_df.reset_index(drop=True), meta_additional.reset_index(drop=True)], axis=1)
     else:
-        meta_input = base_preds
+        meta_input = base_df.reset_index(drop=True)
 
     return meta_input
 
@@ -43,5 +51,18 @@ def train_meta_model(pred_train, pred_test, y_train, y_test, train_df, test_df):
     y_pred_test_bin = (y_pred_test >= 0.5).astype(int)
 
     evaluate_model("Meta_Model", meta_model, X_meta_test, y_test)
+
+    # SHAP analysis to understand contribution of base model predictions
+    explainer = shap.TreeExplainer(meta_model)
+    shap_values = explainer.shap_values(X_meta_test)
+    # For binary classification shap returns a list with two arrays
+    if isinstance(shap_values, list):
+        shap_vals = shap_values[1]
+    else:
+        shap_vals = shap_values
+    shap.summary_plot(shap_vals, X_meta_test, show=False)
+    plt.tight_layout()
+    plt.savefig(shap_plot_path)
+    plt.close()
 
     return y_pred_test_bin, y_pred_test
