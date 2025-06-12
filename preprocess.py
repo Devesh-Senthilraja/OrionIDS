@@ -3,7 +3,7 @@ import os
 
 # Replace with your actual downloaded CSV path
 input_path = "archive/02-21-2018.csv"
-output_path = "Datasets/processed_wednesday_dataset_.csv"
+output_path = "datasets/02-21-2018-processed.csv"
 
 # Load and clean
 df = pd.read_csv(input_path, low_memory=False)

@@ -3,11 +3,11 @@
 # --- Dataset Configuration ---
 #train_dataset_path = "Datasets/processed_thursday_dataset.csv"
 train_dataset_paths = [
-    "Datasets/processed_wednesday_dataset.csv",
-    "Datasets/processed_thursday_dataset.csv",
-    "Datasets/processed_friday_dataset.csv"
+    "datasets/02-14-2018-processed.csv",
+    "datasets/02-15-2018-processed.csv",
+    "datasets/02-16-2018-processed.csv"
 ]
-test_dataset_path = "Datasets/processed_wednesday_dataset_.csv"  # Can be same as train for within-day test
+test_dataset_path = "datasets/02-21-2018-processed.csv"  # Can be same as train for within-day test
 
 # --- Feature Groups ---
 general_features = ['Flow Duration', 'Protocol_6', 'Protocol_17', 'Pkt Len Min', 'Pkt Len Max']
@@ -38,8 +38,8 @@ test_size = 0.3
 n_cv_splits = 5  # Number of CV folds
 
 # --- Output Paths ---
-results_dir = "Results/"
-cache_dir = "Cached_Models/"
+results_dir = "results/"
+cache_dir = "cached_models/"
 plots_dir = f"{results_dir}/plots/"
 metrics_log_path = f"{results_dir}/metrics_log.json"
 shap_plot_path = f"{plots_dir}/meta_model_shap.png"
