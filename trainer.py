@@ -30,7 +30,16 @@ def train_model(model_name, model, param_grid, X_train, y_train):
     return best_model, best_params
 
 def evaluate_model(model_name, model, X_test, y_test):
-    preds = model.predict(X_test)
+    # preds = model.predict(X_test)
+    preds_raw = model.predict(X_test)
+    # Some unsupervised models like IsolationForest/OneClassSVM return predictions
+    # in {-1, 1}. Convert them to {0, 1} where 1 indicates an anomaly so that
+    # classification metrics work correctly.
+    if set(np.unique(preds_raw)).issubset({-1, 1}):
+        preds = (preds_raw == -1).astype(int)
+    else:
+        preds = preds_raw
+
     probs = model.predict_proba(X_test)[:, 1] if hasattr(model, "predict_proba") else preds
 
     acc = accuracy_score(y_test, preds)
