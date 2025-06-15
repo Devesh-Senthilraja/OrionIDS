@@ -25,11 +25,11 @@ enabled_feature_sets = {
 # --- Model Toggles ---
 disable_cache = True  # Set to True to force retraining
 use_grid_search = False
-use_cross_validation = False  # For base models
-use_cv_meta_model = True      # Use cross_val_predict() for meta-model
+use_cv_base_model = False  # For base models, unused
+use_cv_meta_model = True      # Use cross_val_predict() for meta-model, unused
 add_meta_features = True      # Whether to add raw packet features to meta-model
 
-use_class_weights = True   # Enable manual weighting 
+use_class_weights = False   # Enable manual weighting 
 use_smote = False  # Enable SMOTE
 
 use_shap = False #Enable SHAP
@@ -38,6 +38,7 @@ use_shap = False #Enable SHAP
 random_seed = 42
 test_size = 0.3
 n_cv_splits = 5  # Number of CV folds
+n_jobs = -1 # Use all CPU cores
 
 # --- Output Paths ---
 results_dir = "results/"

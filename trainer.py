@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix
-from config import cache_dir, use_grid_search, use_cross_validation, n_cv_splits, random_seed, disable_cache
+from config import cache_dir, use_grid_search, use_cv_base_model, n_cv_splits, random_seed, disable_cache, n_jobs
 from logger import log_metrics, plot_confusion
 
 cache_dir = Path(cache_dir)
@@ -18,7 +18,7 @@ def get_param_hash(params):
 
 def train_model(model_name, model, param_grid, X_train, y_train):
     if use_grid_search:
-        search = GridSearchCV(model, param_grid, cv=n_cv_splits, scoring="f1", n_jobs=-1)
+        search = GridSearchCV(model, param_grid, cv=n_cv_splits, scoring="f1", n_jobs=n_jobs)
         search.fit(X_train, y_train)
         best_model = search.best_estimator_
         best_params = search.best_params_
