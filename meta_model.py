@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_predict
-from config import add_meta_features, meta_features, use_cv_meta_model, random_seed, shap_plot_path
+from config import add_meta_features, meta_features, use_cv_meta_model, random_seed, shap_plot_path, use_shap
 from trainer import evaluate_model
 import shap
 import matplotlib.pyplot as plt
@@ -52,17 +52,27 @@ def train_meta_model(pred_train, pred_test, y_train, y_test, train_df, test_df):
 
     evaluate_model("Meta_Model", meta_model, X_meta_test, y_test)
 
-    # SHAP analysis to understand contribution of base model predictions
-    explainer = shap.TreeExplainer(meta_model)
-    shap_values = explainer.shap_values(X_meta_test)
-    # For binary classification shap returns a list with two arrays
-    if isinstance(shap_values, list):
-        shap_vals = shap_values[1]
-    else:
-        shap_vals = shap_values
-    shap.summary_plot(shap_vals, X_meta_test, show=False)
-    plt.tight_layout()
-    plt.savefig(shap_plot_path)
-    plt.close()
+    if use_shap:
+        # SHAP analysis to understand contribution of base model predictions
+        explainer = shap.TreeExplainer(meta_model)
+        shap_values = explainer.shap_values(X_meta_test)
+
+        # For binary classification shap returns a list with two arrays
+        if isinstance(shap_values, list):
+            shap_vals = shap_values[1]
+        else:
+            shap_vals = shap_values
+
+        # Add readable feature names
+        feature_names = (
+            sorted(pred_train.keys()) + meta_features
+            if add_meta_features else sorted(pred_train.keys())
+        )
+        X_meta_test_df = pd.DataFrame(X_meta_test, columns=feature_names)
+
+        shap.summary_plot(shap_vals, X_meta_test_df, show=False)
+        plt.tight_layout()
+        plt.savefig(shap_plot_path)
+        plt.close()
 
     return y_pred_test_bin, y_pred_test
