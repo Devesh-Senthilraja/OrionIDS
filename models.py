@@ -11,7 +11,7 @@ def get_model_configs(scale_pos_weight=None, class_weights=None):
     if use_class_weights: 
         # LightGBM on General Features
         configs["LightGBM_General"] = {
-            "model": LGBMClassifier(n_estimators=100, random_state=random_seed, n_jobs=n_jobs, class_weight='balanced'),
+            "model": LGBMClassifier(n_estimators=100, random_state=random_seed, class_weight='balanced'),
             "param_grid": {
                 "learning_rate": [0.1, 0.01] if use_grid_search else [0.1],
                 "num_leaves": [31, 50] if use_grid_search else [31],
@@ -22,7 +22,7 @@ def get_model_configs(scale_pos_weight=None, class_weights=None):
 
         # XGBoost on Statistical Features
         configs["XGBoost_Statistical"] = {
-            "model": XGBClassifier(n_estimators=100, use_label_encoder=False, eval_metric='logloss', n_jobs=n_jobs, random_state=random_seed, scale_pos_weight=scale_pos_weight),
+            "model": XGBClassifier(n_estimators=100, use_label_encoder=False, eval_metric='logloss', random_state=random_seed, scale_pos_weight=scale_pos_weight),
             "param_grid": {
                 "learning_rate": [0.1, 0.01] if use_grid_search else [0.1],
                 "max_depth": [5, 10] if use_grid_search else [5]
@@ -32,7 +32,7 @@ def get_model_configs(scale_pos_weight=None, class_weights=None):
 
         # CatBoost on Behavioral Features
         configs["CatBoost_Behavioral"] = {
-            "model": CatBoostClassifier(iterations=100, depth=6, learning_rate=0.1, verbose=0, random_state=random_seed, n_jobs=n_jobs, class_weights=class_weights),
+            "model": CatBoostClassifier(iterations=100, depth=6, learning_rate=0.1, verbose=0, random_state=random_seed, class_weights=class_weights),
             "param_grid": {
                 "depth": [4, 6, 8] if use_grid_search else [6],
                 "learning_rate": [0.1, 0.01] if use_grid_search else [0.1]
@@ -43,7 +43,7 @@ def get_model_configs(scale_pos_weight=None, class_weights=None):
     else:
         # LightGBM on General Features
         configs["LightGBM_General"] = {
-            "model": LGBMClassifier(n_estimators=100, random_state=random_seed),
+            "model": LGBMClassifier(n_estimators=100, random_state=random_seed, n_jobs=n_jobs),
             "param_grid": {
                 "learning_rate": [0.1, 0.01] if use_grid_search else [0.1],
                 "num_leaves": [31, 50] if use_grid_search else [31],
@@ -54,7 +54,7 @@ def get_model_configs(scale_pos_weight=None, class_weights=None):
 
         # XGBoost on Statistical Features
         configs["XGBoost_Statistical"] = {
-            "model": XGBClassifier(n_estimators=100, use_label_encoder=False, eval_metric='logloss', random_state=random_seed),
+            "model": XGBClassifier(n_estimators=100, use_label_encoder=False, eval_metric='logloss', random_state=random_seed, n_jobs=n_jobs),
             "param_grid": {
                 "learning_rate": [0.1, 0.01] if use_grid_search else [0.1],
                 "max_depth": [5, 10] if use_grid_search else [5]
@@ -64,7 +64,7 @@ def get_model_configs(scale_pos_weight=None, class_weights=None):
 
         # CatBoost on Behavioral Features
         configs["CatBoost_Behavioral"] = {
-            "model": CatBoostClassifier(iterations=100, depth=6, learning_rate=0.1, verbose=0, random_state=random_seed),
+            "model": CatBoostClassifier(iterations=100, depth=6, learning_rate=0.1, verbose=0, random_state=random_seed, n_jobs=n_jobs),
             "param_grid": {
                 "depth": [4, 6, 8] if use_grid_search else [6],
                 "learning_rate": [0.1, 0.01] if use_grid_search else [0.1]

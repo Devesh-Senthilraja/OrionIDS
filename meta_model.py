@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_predict
-from config import add_meta_features, meta_features, use_cv_meta_model, random_seed, use_class_weights, shap_plot_path, use_shap, n_jobs
+from config import add_meta_features, meta_features, use_cv_meta_model, random_seed, use_class_weights, shap_plot_path, use_shap, n_jobs, meta_model_type
 from trainer import evaluate_model
 import shap
 import matplotlib.pyplot as plt
@@ -37,10 +37,12 @@ def train_meta_model(pred_train, pred_test, y_train, y_test, train_df, test_df, 
     X_meta_test = build_meta_inputs(pred_test, test_df, test_idx, add_meta_features)
 
     # Define meta-model
-    if use_class_weights and class_weights is not None:
-        meta_model = RandomForestClassifier(n_estimators=100, random_state=random_seed, class_weight=class_weights, n_jobs=n_jobs)
+    if meta_model_type == "RandomForest":
+        meta_model = RandomForestClassifier(n_estimators=100, random_state=random_seed, n_jobs=n_jobs)
+    elif meta_model_type == "LogisticRegression":
+        meta_model = LogisticRegression(max_iter=1000, random_state=random_seed, solver="saga", n_jobs=n_jobs)
     else:
-        meta_model = RandomForestClassifier(n_estimators=100, random_state=random_seed)
+        raise ValueError("Unknown meta_model_type: " + meta_model_type)
 
     if use_cv_meta_model:
         # Safer training: use CV predictions on train set

@@ -17,9 +17,9 @@ meta_features = ['Dst Port', 'Pkt Len Min', 'Pkt Len Max']  # These are packet-l
 
 # Toggle which feature groups to use
 enabled_feature_sets = {
-    "General": True,
+    "General": False,
     "Statistical": True,
-    "Behavioral": True
+    "Behavioral": False
 }
 
 # --- Model Toggles ---
@@ -39,6 +39,7 @@ random_seed = 42
 test_size = 0.3
 n_cv_splits = 5  # Number of CV folds
 n_jobs = -1 # Use all CPU cores
+meta_model_type = "RandomForest"
 
 # --- Output Paths ---
 results_dir = "results/"
