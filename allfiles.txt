@@ -1,0 +1,617 @@
+from data_loader import load_multiple_datasets, load_dataset
+from trainer import train_model, evaluate_model
+from models import get_model_configs
+from config import (
+    train_dataset_paths, test_dataset_path,
+    general_features, statistical_features, behavioral_features, meta_features,
+    random_seed
+)
+from imblearn.over_sampling import SMOTE
+import json
+
+# Define all feature set options
+FEATURE_SETS = {
+    "General": general_features,
+    "Statistical": statistical_features,
+    "Behavioral": behavioral_features,
+    "All": list({*general_features, *statistical_features, *behavioral_features})
+}
+
+def prepare_features(df, features, include_meta):
+    feats = features.copy()
+    if include_meta:
+        # Add meta features unless they're already present
+        for m in meta_features:
+            if m not in feats:
+                feats.append(m)
+    feats = list(dict.fromkeys(feats))
+    return df[feats]
+
+def run_benchmarks(smote=True, include_meta=True, results_path="results/benchmark_base_models.json"):
+    train_df = load_multiple_datasets(train_dataset_paths)
+    test_df = load_dataset(test_dataset_path)
+    y_train = train_df["Label"]
+    y_test = test_df["Label"]
+
+    # Loop through all models and feature sets
+    results = {}
+    base_configs = get_model_configs()
+    for model_name, cfg in base_configs.items():
+        for fs_name, fs_cols in FEATURE_SETS.items():
+            # Prepare features
+            X_train = prepare_features(train_df, fs_cols, include_meta)
+            X_test = prepare_features(test_df, fs_cols, include_meta)
+            y_train_exp = y_train
+
+            # Optionally apply SMOTE
+            if smote:
+                sm = SMOTE(random_state=random_seed)
+                X_train, y_train_exp = sm.fit_resample(X_train, y_train)
+
+            # Train and evaluate
+            model, best_params = train_model(f"{model_name}_{fs_name}", cfg["model"], cfg["param_grid"], X_train, y_train_exp)
+            preds, probs, metrics = evaluate_model(f"{model_name}_{fs_name}", model, X_test, y_test)
+            tag = f"{model_name}__{fs_name}{'__meta' if include_meta else ''}{'__SMOTE' if smote else ''}"
+            results[tag] = metrics
+            print(f"\n{tag}\n{json.dumps(metrics, indent=2)}")
+
+    # Save all results
+    with open(results_path, "w") as f:
+        json.dump(results, f, indent=2)
+    print(f"\nAll results saved to {results_path}")
+
+if __name__ == "__main__":
+    # Try all model/feature combos, with meta and SMOTE enabled
+    run_benchmarks(smote=True, include_meta=True)
+# config.py
+
+# --- Dataset Configuration ---
+#train_dataset_path = "Datasets/processed_thursday_dataset.csv"
+train_dataset_paths = [
+    "datasets/02-14-2018-processed.csv",
+    "datasets/02-15-2018-processed.csv",
+    "datasets/02-16-2018-processed.csv"
+]
+test_dataset_path = "datasets/02-21-2018-processed.csv"  # Can be same as train for within-day test
+
+# --- Feature Groups ---
+general_features = ['Flow Duration', 'Protocol_6', 'Protocol_17', 'Pkt Len Min', 'Pkt Len Max']
+statistical_features = ['Tot Fwd Pkts', 'TotLen Fwd Pkts', 'Flow IAT Mean', 'Fwd IAT Std', 'Bwd Pkt Len Mean']
+behavioral_features = ['SYN Flag Cnt', 'ACK Flag Cnt', 'Fwd Pkts/s', 'Bwd Pkts/s', 'RST Flag Cnt', 'Active Mean', 'Idle Mean', 'Down/Up Ratio']
+meta_features = ['Dst Port', 'Pkt Len Min', 'Pkt Len Max']  # These are packet-level features used in meta-model
+
+# Toggle which feature groups to use
+enabled_feature_sets = {
+    "General": False,
+    "Statistical": True,
+    "Behavioral": False
+}
+
+# --- Model Toggles ---
+disable_cache = True  # Set to True to force retraining
+use_grid_search = False
+use_cv_base_model = False  # For base models, unused
+use_cv_meta_model = True      # Use cross_val_predict() for meta-model, unused
+add_meta_features = True      # Whether to add raw packet features to meta-model
+
+use_class_weights = False   # Enable manual weighting 
+use_smote = False  # Enable SMOTE
+
+use_shap = False #Enable SHAP
+
+# --- Model Settings ---
+random_seed = 42
+test_size = 0.3
+n_cv_splits = 5  # Number of CV folds
+n_jobs = -1 # Use all CPU cores
+meta_model_type = "RandomForest"
+
+# --- Output Paths ---
+results_dir = "results/"
+cache_dir = "cached_models/"
+plots_dir = f"{results_dir}/plots/"
+metrics_log_path = f"{results_dir}/metrics_log.json"
+shap_plot_path = f"{plots_dir}/meta_model_shap.png"
+# data_loader.py
+
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from imblearn.over_sampling import SMOTE
+from config import (
+    # train_dataset_path,
+    train_dataset_paths,
+    test_dataset_path,
+    general_features,
+    statistical_features,
+    behavioral_features,
+    enabled_feature_sets,
+    add_meta_features,
+    meta_features,
+    test_size,
+    random_seed,
+    use_class_weights,
+    use_smote
+)
+
+def load_dataset(path):
+    df = pd.read_csv(path)
+    df = df.dropna()  # Drop any NaNs to avoid model errors
+    df.reset_index(drop=True, inplace=True)
+
+    # Binary label assumed to be in a column called 'Label'
+    if 'Label' not in df.columns:
+        raise ValueError(f"Dataset {path} missing required 'Label' column.")
+    
+    return df
+
+def load_multiple_datasets(paths):
+    all_dfs = [load_dataset(p) for p in paths]
+    merged_df = pd.concat(all_dfs, ignore_index=True)
+    return merged_df
+
+def extract_features(df):
+    X_dict = {}
+    if enabled_feature_sets.get("General", False):
+        X_dict["General"] = df[general_features]
+    if enabled_feature_sets.get("Statistical", False):
+        X_dict["Statistical"] = df[statistical_features]
+    if enabled_feature_sets.get("Behavioral", False):
+        X_dict["Behavioral"] = df[behavioral_features]
+
+    y = df["Label"]
+    return X_dict, y
+
+def get_train_test_data():
+    #train_df = load_datasets(train_dataset_path)
+    train_df = load_multiple_datasets(train_dataset_paths)
+    test_df = load_dataset(test_dataset_path)
+    
+    if use_smote:
+        smote_columns = []
+        if enabled_feature_sets.get("General", False):
+            smote_columns.extend(general_features)
+        if enabled_feature_sets.get("Statistical", False):
+            smote_columns.extend(statistical_features)
+        if enabled_feature_sets.get("Behavioral", False):
+            smote_columns.extend(behavioral_features)
+        if add_meta_features:
+            for col in meta_features:
+                if col not in smote_columns:
+                    smote_columns.append(col)
+
+        smote = SMOTE(random_state=random_seed)
+
+        X_res, y_res = smote.fit_resample(train_df[smote_columns], train_df["Label"])
+        train_df = pd.DataFrame(X_res, columns=smote_columns)
+        train_df["Label"] = y_res
+
+    X_train_dict, y_train = extract_features(train_df)
+    X_test_dict, y_test = extract_features(test_df)
+
+    if use_class_weights:
+        pos = np.sum(y_train == 1)
+        neg = np.sum(y_train == 0)
+        scale_pos_weight = neg / pos
+        class_weights = [neg / (pos + neg), pos / (pos + neg)]
+    else:
+        scale_pos_weight = None
+        class_weights = None
+
+    return X_train_dict, X_test_dict, y_train, y_test, train_df, test_df, scale_pos_weight, class_weights
+# logger.py
+
+import json
+from pathlib import Path
+import seaborn as sns
+import matplotlib.pyplot as plt
+from config import metrics_log_path, plots_dir
+
+Path(plots_dir).mkdir(parents=True, exist_ok=True)
+
+def log_metrics(model_name, metrics):
+    try:
+        with open(metrics_log_path, "r") as f:
+            log = json.load(f)
+    except FileNotFoundError:
+        log = {}
+
+    log[model_name] = metrics
+
+    with open(metrics_log_path, "w") as f:
+        json.dump(log, f, indent=4)
+
+def plot_confusion(cm, model_name):
+    plt.figure(figsize=(5, 4))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="viridis")
+    plt.title(f"{model_name} Confusion Matrix")
+    plt.xlabel("Predicted")
+    plt.ylabel("True")
+    plt.savefig(f"{plots_dir}/{model_name}_confusion.png")
+    plt.close()
+# main.py
+
+from data_loader import get_train_test_data
+from models import get_model_configs
+from trainer import run_base_models
+from meta_model import train_meta_model
+from unsupervised import run_isolation_forest, run_one_class_svm
+from config import results_dir
+
+import os
+
+def main():
+    print("Starting Meta-Model Experiment Pipeline")
+
+    # Make sure results directory exists
+    os.makedirs(results_dir, exist_ok=True)
+
+    # Step 1: Load data
+    print("Loading datasets...")
+    X_train_dict, X_test_dict, y_train, y_test, train_df, test_df, scale_pos_weight, class_weights = get_train_test_data()
+
+    # Step 2: Load base model configs
+    print("Setting up base models...")
+    model_configs = get_model_configs(scale_pos_weight, class_weights)
+
+    # Step 3: Train base models and get predictions
+    print("Training base models...")
+    pred_train_dict, pred_test_dict = run_base_models(model_configs, X_train_dict, X_test_dict, y_train, y_test)
+
+    # Step 4: Train meta-model using base predictions
+    print("Training meta-model...")
+    _ = train_meta_model(pred_train_dict, pred_test_dict, y_train, y_test, train_df, test_df, class_weights)
+    
+    """
+    print("Running Isolation Forest baseline...")
+    run_isolation_forest(X_train_dict, X_test_dict, y_train, y_test)
+
+    print("Running One-Class SVM baseline...")
+    run_one_class_svm(X_train_dict, X_test_dict, y_train, y_test)
+    """
+
+    print("All done! Results saved to:", results_dir)
+
+if __name__ == "__main__":
+    main()
+# meta_model.py
+
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_predict
+from config import add_meta_features, meta_features, use_cv_meta_model, random_seed, use_class_weights, shap_plot_path, use_shap, n_jobs, meta_model_type
+from trainer import evaluate_model
+import shap
+import matplotlib.pyplot as plt
+
+def build_meta_inputs(predictions_dict, meta_raw, index_subset, use_meta_features):
+    # Stack predictions from base models
+    pred_cols = [f"pred_{k}" for k in sorted(predictions_dict.keys())]
+    base_df = pd.DataFrame(
+        np.column_stack([predictions_dict[k] for k in sorted(predictions_dict.keys())]),
+        columns=pred_cols,
+        index=index_subset,
+    )
+
+    if use_meta_features:
+        meta_additional = meta_raw.loc[index_subset, meta_features]
+        meta_input = pd.concat([base_df.reset_index(drop=True), meta_additional.reset_index(drop=True)], axis=1)
+    else:
+        meta_input = base_df.reset_index(drop=True)
+
+    return meta_input
+
+def train_meta_model(pred_train, pred_test, y_train, y_test, train_df, test_df, class_weights):
+    # Get indices to align meta features
+    train_idx = y_train.index
+    test_idx = y_test.index
+
+    # Build inputs
+    X_meta_train = build_meta_inputs(pred_train, train_df, train_idx, add_meta_features)
+    X_meta_test = build_meta_inputs(pred_test, test_df, test_idx, add_meta_features)
+
+    # Define meta-model
+    if meta_model_type == "RandomForest":
+        meta_model = RandomForestClassifier(n_estimators=100, random_state=random_seed, n_jobs=n_jobs)
+    elif meta_model_type == "LogisticRegression":
+        meta_model = LogisticRegression(max_iter=1000, random_state=random_seed, solver="saga", n_jobs=n_jobs)
+    else:
+        raise ValueError("Unknown meta_model_type: " + meta_model_type)
+
+    if use_cv_meta_model:
+        # Safer training: use CV predictions on train set
+        y_pred_train = cross_val_predict(meta_model, X_meta_train, y_train, cv=5, method='predict_proba', n_jobs=n_jobs)[:, 1]
+        meta_model.fit(X_meta_train, y_train)  # Train final model for test use
+    else:
+        meta_model.fit(X_meta_train, y_train)
+        y_pred_train = meta_model.predict_proba(X_meta_train)[:, 1]
+
+    y_pred_test = meta_model.predict_proba(X_meta_test)[:, 1]
+    y_pred_test_bin = (y_pred_test >= 0.5).astype(int)
+
+    evaluate_model("Meta_Model", meta_model, X_meta_test, y_test)
+
+    if use_shap:
+        # SHAP analysis to understand contribution of base model predictions
+        explainer = shap.TreeExplainer(meta_model)
+        shap_values = explainer.shap_values(X_meta_test)
+
+        # For binary classification shap returns a list with two arrays
+        if isinstance(shap_values, list):
+            shap_vals = shap_values[1]
+        else:
+            shap_vals = shap_values
+
+        # Add readable feature names
+        feature_names = (
+            sorted(pred_train.keys()) + meta_features
+            if add_meta_features else sorted(pred_train.keys())
+        )
+        X_meta_test_df = pd.DataFrame(X_meta_test, columns=feature_names)
+
+        shap.summary_plot(shap_vals, X_meta_test_df, show=False)
+        plt.tight_layout()
+        plt.savefig(shap_plot_path)
+        plt.close()
+
+    return y_pred_test_bin, y_pred_test
+# models.py
+
+from lightgbm import LGBMClassifier
+from xgboost import XGBClassifier
+from catboost import CatBoostClassifier
+from multiprocessing import cpu_count
+from config import random_seed, use_grid_search, use_class_weights, n_jobs
+
+def get_model_configs(scale_pos_weight=None, class_weights=None):
+    configs = {}
+
+    if use_class_weights: 
+        # LightGBM on General Features
+        configs["LightGBM_General"] = {
+            "model": LGBMClassifier(n_estimators=100, random_state=random_seed, class_weight='balanced'), #device : GPU todo
+            "param_grid": {
+                "learning_rate": [0.1, 0.01] if use_grid_search else [0.1],
+                "num_leaves": [31, 50] if use_grid_search else [31],
+                "max_depth": [10, 20] if use_grid_search else [10]
+            },
+            "feature_key": "General"
+        }
+
+        # XGBoost on Statistical Features
+        configs["XGBoost_Statistical"] = {
+            "model": XGBClassifier(n_estimators=100, use_label_encoder=False, eval_metric='logloss', random_state=random_seed, scale_pos_weight=scale_pos_weight),
+            "param_grid": {
+                "learning_rate": [0.1, 0.01] if use_grid_search else [0.1],
+                "max_depth": [5, 10] if use_grid_search else [5]
+            },
+            "feature_key": "Statistical"
+        }
+
+        # CatBoost on Behavioral Features
+        configs["CatBoost_Behavioral"] = {
+            "model": CatBoostClassifier(iterations=100, depth=6, learning_rate=0.1, verbose=0, random_state=random_seed, class_weights=class_weights),
+            "param_grid": {
+                "depth": [4, 6, 8] if use_grid_search else [6],
+                "learning_rate": [0.1, 0.01] if use_grid_search else [0.1]
+            },
+            "feature_key": "Behavioral"
+        }
+
+    else:
+        # LightGBM on General Features
+        configs["LightGBM_General"] = {
+            "model": LGBMClassifier(n_estimators=100, random_state=random_seed, n_jobs=n_jobs),
+            "param_grid": {
+                "learning_rate": [0.1, 0.01] if use_grid_search else [0.1],
+                "num_leaves": [31, 50] if use_grid_search else [31],
+                "max_depth": [10, 20] if use_grid_search else [10]
+            },
+            "feature_key": "General"
+        }
+
+        # XGBoost on Statistical Features
+        configs["XGBoost_Statistical"] = {
+            "model": XGBClassifier(n_estimators=100, use_label_encoder=False, eval_metric='logloss', random_state=random_seed, n_jobs=n_jobs),
+            "param_grid": {
+                "learning_rate": [0.1, 0.01] if use_grid_search else [0.1],
+                "max_depth": [5, 10] if use_grid_search else [5]
+            },
+            "feature_key": "Statistical"
+        }
+
+        # CatBoost on Behavioral Features
+        configs["CatBoost_Behavioral"] = {
+            "model": CatBoostClassifier(iterations=100, depth=6, learning_rate=0.1, verbose=0, random_state=random_seed, thread_count=cpu_count()),
+            "param_grid": {
+                "depth": [4, 6, 8] if use_grid_search else [6],
+                "learning_rate": [0.1, 0.01] if use_grid_search else [0.1]
+            },
+            "feature_key": "Behavioral"
+        }
+
+    return configs
+import pandas as pd
+import os
+
+# Replace with your actual downloaded CSV path
+input_path = "CIC-IDS-2018/03-02-2018.csv"
+output_path = "datasets/03-02-2018-processed.csv"
+
+# Load and clean
+df = pd.read_csv(input_path, low_memory=False)
+
+# Relabel multi-class labels to binary
+df["Label"] = df["Label"].apply(lambda x: 0 if "Benign" in str(x) else 1)
+
+# Create protocol flags for TCP (6) and UDP (17)
+df["Protocol"] = pd.to_numeric(df["Protocol"], errors="coerce")
+df["Protocol_6"] = (df["Protocol"] == 6).astype(int)
+df["Protocol_17"] = (df["Protocol"] == 17).astype(int)
+
+# Save cleaned dataset
+core_features = [
+    'Flow Duration', 'Protocol_6', 'Protocol_17', 'Pkt Len Min', 'Pkt Len Max',
+    'Tot Fwd Pkts', 'TotLen Fwd Pkts', 'Flow IAT Mean', 'Fwd IAT Std', 'Bwd Pkt Len Mean',
+    'SYN Flag Cnt', 'ACK Flag Cnt', 'Fwd Pkts/s', 'Bwd Pkts/s', 'RST Flag Cnt',
+    'Active Mean', 'Idle Mean', 'Down/Up Ratio',
+    'Dst Port'
+]
+
+# Add Label
+core_features.append("Label")
+
+# Only keep those features
+df = df[[col for col in core_features if col in df.columns]]
+
+# Convert to numeric, coerce junk to NaN
+df = df.apply(pd.to_numeric, errors="coerce")
+
+# Drop rows with NaNs
+df = df.dropna()
+
+# Save cleaned dataset
+df.to_csv(output_path, index=False)
+print(f"Saved preprocessed dataset to {output_path}")
+print(df.dtypes)
+print(df["Label"].value_counts())# trainer.py
+
+import json
+import pickle
+import hashlib
+from pathlib import Path
+import numpy as np
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix
+from config import cache_dir, use_grid_search, use_cv_base_model, n_cv_splits, random_seed, disable_cache, n_jobs
+from logger import log_metrics, plot_confusion
+
+cache_dir = Path(cache_dir)
+cache_dir.mkdir(parents=True, exist_ok=True)
+
+def get_param_hash(params):
+    return hashlib.sha256(json.dumps(params, sort_keys=True).encode()).hexdigest()
+
+def train_model(model_name, model, param_grid, X_train, y_train):
+    if use_grid_search:
+        search = GridSearchCV(model, param_grid, cv=n_cv_splits, scoring="f1", n_jobs=n_jobs)
+        search.fit(X_train, y_train)
+        best_model = search.best_estimator_
+        best_params = search.best_params_
+    else:
+        model.set_params(**{k: v[0] for k, v in param_grid.items()})
+        best_model = model.fit(X_train, y_train)
+        best_params = {k: v[0] for k, v in param_grid.items()}
+
+    return best_model, best_params
+
+def evaluate_model(model_name, model, X_test, y_test):
+    # preds = model.predict(X_test)
+    preds_raw = model.predict(X_test)
+    # Some unsupervised models like IsolationForest/OneClassSVM return predictions
+    # in {-1, 1}. Convert them to {0, 1} where 1 indicates an anomaly so that
+    # classification metrics work correctly.
+    if set(np.unique(preds_raw)).issubset({-1, 1}):
+        preds = (preds_raw == -1).astype(int)
+    else:
+        preds = preds_raw
+
+    probs = model.predict_proba(X_test)[:, 1] if hasattr(model, "predict_proba") else preds
+
+    acc = accuracy_score(y_test, preds)
+    f1 = f1_score(y_test, preds)
+    prec = precision_score(y_test, preds)
+    rec = recall_score(y_test, preds)
+    cm = confusion_matrix(y_test, preds)
+
+    plot_confusion(cm, model_name)
+
+    metrics = {
+        "accuracy": acc,
+        "f1_score": f1,
+        "precision": prec,
+        "recall": rec,
+        "confusion_matrix": cm.tolist()
+    }
+
+    log_metrics(model_name, metrics)
+    return preds, probs, metrics
+
+def run_base_models(model_configs, X_train_dict, X_test_dict, y_train, y_test):
+    predictions_train = {}
+    predictions_test = {}
+
+    for name, cfg in model_configs.items():
+        X_train = X_train_dict[cfg["feature_key"]]
+        X_test = X_test_dict[cfg["feature_key"]]
+
+        # Create a unique hash for caching
+        param_hash = get_param_hash(cfg["param_grid"])
+        model_path = cache_dir / f"{name}_{param_hash}.pkl"
+
+        if model_path.exists() and not disable_cache:
+            with open(model_path, "rb") as f:
+                model = pickle.load(f)
+        else:
+            model, best_params = train_model(name, cfg["model"], cfg["param_grid"], X_train, y_train)
+            if not disable_cache:
+                with open(model_path, "wb") as f:
+                    pickle.dump(model, f)
+
+        preds, probs, _ = evaluate_model(name, model, X_test, y_test)
+        predictions_train[name] = model.predict_proba(X_train)[:, 1] if hasattr(model, "predict_proba") else model.predict(X_train)
+        predictions_test[name] = probs
+
+    return predictions_train, predictions_testfrom sklearn.ensemble import IsolationForest
+from sklearn.svm import OneClassSVM
+from trainer import evaluate_model
+from config import n_jobs
+
+
+def run_isolation_forest(X_train_dict, X_test_dict, y_train, y_test, feature_key="Statistical"):
+    """Train and evaluate an Isolation Forest baseline."""
+    X_train = X_train_dict[feature_key]
+    X_test = X_test_dict[feature_key]
+
+    # Train only on benign traffic
+    X_train_benign = X_train[y_train == 0]
+
+    model = IsolationForest(contamination=0.3, random_state=42, n_jobs=n_jobs)
+    model.fit(X_train_benign)
+
+    raw_preds = model.predict(X_test)
+    y_pred = (raw_preds == -1).astype(int)
+
+    # Evaluate using overridden predictions (no probability output)
+    _, _, metrics = evaluate_model(
+        "IsolationForest_Baseline",
+        model,
+        X_test,
+        y_test
+    )
+    return metrics
+
+
+def run_one_class_svm(X_train_dict, X_test_dict, y_train, y_test, feature_key="Statistical"):
+    """Train and evaluate a One-Class SVM baseline."""
+    X_train = X_train_dict[feature_key]
+    X_test = X_test_dict[feature_key]
+
+    # Train only on benign traffic
+    X_train_benign = X_train[y_train == 0]
+
+    model = OneClassSVM(kernel="rbf", gamma="auto", nu=0.1)
+    model.fit(X_train_benign)
+
+    raw_preds = model.predict(X_test)
+    y_pred = (raw_preds == -1).astype(int)
+
+    _, _, metrics = evaluate_model(
+        "OneClassSVM_Baseline",
+        model,
+        X_test,
+        y_test
+    )
+    return metrics

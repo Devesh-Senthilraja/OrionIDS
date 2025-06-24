@@ -1,0 +1,15 @@
+Attack types across all days:
+  Benign
+  Bot
+  Brute Force -Web
+  Brute Force -XSS
+  DDOS attack-HOIC
+  DDOS attack-LOIC-UDP
+  DoS attacks-GoldenEye
+  DoS attacks-Hulk
+  DoS attacks-SlowHTTPTest
+  DoS attacks-Slowloris
+  FTP-BruteForce
+  Infilteration
+  SQL Injection
+  SSH-Bruteforce
