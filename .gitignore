@@ -1,10 +1,10 @@
 # Ignore all CSV files
-archive/
+
 *.csv
 
 # Ignore cache files and logs
 __pycache__/
-Results/
+
 *.log
 *.json
 *.pkl
