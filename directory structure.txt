@@ -1,0 +1,13 @@
+/experiment_pipeline/
+├── exp_config.yaml         # your master toggle file
+├── run_pipeline.py         # entry-point: reads config, spins up experiments
+├── pipeline/
+│   ├── __init__.py
+│   ├── config_parser.py    # loads & validates exp_config.yaml
+│   ├── data_loader.py      # reads CSVs, applies same-day / cross-day splits & caps
+│   ├── model_factory.py    # defines MODELS, META_MODELS and instantiates with grid search / class weights
+│   ├── sampling.py         # SMOTE, class_weight, downsampling
+│   ├── trainer.py          # trains base and (optionally) meta models
+│   ├── evaluator.py        # runs predictions, computes metrics, saves JSON
+│   └── plotter.py          # heatmaps, SHAP, verbose logs
+└── results/                # auto-created: metrics JSON, logs, plots/

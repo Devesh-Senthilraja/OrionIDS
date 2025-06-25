@@ -1,0 +1,63 @@
+# Dataset files (relative paths under cleaned/)
+datasets:
+  - 02-15-2018.csv
+  - 02-16-2018.csv
+  - 02-17-2018.csv
+  - 02-18-2018.csv
+  - 02-19-2018.csv
+  - 02-20-2018.csv
+  - 02-21-2018.csv
+  - 02-22-2018.csv
+  - 02-23-2018.csv
+
+# Experiment types
+same_day: true
+cross_day: true
+
+# Sampling caps per file
+same_day_cap: 100000
+cross_day_cap: 100000
+
+# Base models → assigned feature sets
+base_models:
+  LogisticRegression:
+    - flow_metrics
+  RandomForest:
+    - flags_and_protocol
+    - timing_iat
+  ExtraTrees:
+    - packet_size_stats
+
+# If true, each feature‐set model combo is run separately.
+# If false, all feature sets for a model are concatenated into one X.
+feature_grouping: false
+
+# Grid search toggles
+grid_search_base: true
+grid_search_meta: false
+
+# Meta‐model usage
+use_meta: true
+
+# Meta models → raw meta‐feature groups to include
+meta_models:
+  RF_meta:
+    - META_FEATURES
+  LR:
+    - META_FEATURES
+
+# Class‐imbalance handling
+smote: true
+class_weighting: true
+
+# Include raw meta‐features alongside base model preds
+include_meta_features: true
+
+# Parallel jobs
+n_jobs: 4
+
+# Logging & outputs
+verbose: true
+plot_heatmaps: true
+plot_shap: true
+save_metrics_json: true
