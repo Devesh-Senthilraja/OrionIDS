@@ -1,6 +1,8 @@
 # Ignore all CSV files
 
-*.csv
+CIC-IDS-2018/
+cleaned/
+archived_cleaned/
 
 # Ignore cache files and logs
 __pycache__/

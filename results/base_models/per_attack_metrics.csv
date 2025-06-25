@@ -1,0 +1,1561 @@
+file,attack_type,feature_group,model,accuracy,f1_score,precision,recall
+02-14-2018.csv,Benign,flow_metrics,LogisticRegression,0.8509513264337687,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,LogisticRegression,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,LogisticRegression,0.49554332386363636,0.6626933716415961,1.0,0.49554332386363636
+02-14-2018.csv,Benign,flow_metrics,DecisionTree,0.9860200961118393,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,DecisionTree,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,DecisionTree,0.9925958806818181,0.9962841841690206,1.0,0.9925958806818181
+02-14-2018.csv,Benign,flow_metrics,RandomForest,0.9860351606634429,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,RandomForest,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,RandomForest,0.9928444602272727,0.9964093837148178,1.0,0.9928444602272727
+02-14-2018.csv,Benign,flow_metrics,ExtraTrees,0.9860251176290404,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,ExtraTrees,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,ExtraTrees,0.9927911931818182,0.9963825578701642,1.0,0.9927911931818182
+02-14-2018.csv,Benign,flow_metrics,XGBoost,0.9852668685316581,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,XGBoost,0.9718268550627124,0.9857121608497458,1.0,0.9718268550627124
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,XGBoost,0.9943359375,0.9971599255704632,1.0,0.9943359375
+02-14-2018.csv,Benign,flow_metrics,LightGBM,0.986015074594638,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,LightGBM,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,LightGBM,0.9928799715909091,0.9964272668145654,1.0,0.9928799715909091
+02-14-2018.csv,Benign,flow_metrics,CatBoost,0.9860200961118393,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,CatBoost,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,CatBoost,0.992862215909091,0.9964183253443575,1.0,0.992862215909091
+02-14-2018.csv,Benign,flow_metrics,KNN,0.982329280968952,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,KNN,0.9772958611528044,0.9885175813628828,1.0,0.9772958611528044
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,KNN,0.9942294034090909,0.9971063526688332,1.0,0.9942294034090909
+02-14-2018.csv,Benign,flow_metrics,LinearSVC,0.8418975309199922,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,LinearSVC,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,LinearSVC,0.4955965909090909,0.6627410010447335,1.0,0.4955965909090909
+02-14-2018.csv,Benign,flow_metrics,MLP,0.9619469426492521,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flow_metrics,MLP,0.9987578282697583,0.999378528147496,1.0,0.9987578282697583
+02-14-2018.csv,SSH-Bruteforce,flow_metrics,MLP,0.9531072443181818,0.975990690824462,1.0,0.9531072443181818
+02-14-2018.csv,Benign,packet_size_stats,LogisticRegression,0.722059022913183,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,LogisticRegression,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,LogisticRegression,0.49563210227272725,0.6627727520953535,1.0,0.49563210227272725
+02-14-2018.csv,Benign,packet_size_stats,DecisionTree,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,DecisionTree,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,DecisionTree,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,packet_size_stats,RandomForest,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,RandomForest,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,RandomForest,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,packet_size_stats,ExtraTrees,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,ExtraTrees,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,ExtraTrees,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,packet_size_stats,XGBoost,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,XGBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,XGBoost,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,packet_size_stats,LightGBM,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,LightGBM,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,LightGBM,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,packet_size_stats,CatBoost,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,CatBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,CatBoost,0.9980113636363637,0.9990046921655055,1.0,0.9980113636363637
+02-14-2018.csv,Benign,packet_size_stats,KNN,0.9501112266060068,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,KNN,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,KNN,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,packet_size_stats,LinearSVC,0.9387877053172846,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,LinearSVC,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,LinearSVC,0.9998934659090909,0.9999467301170162,1.0,0.9998934659090909
+02-14-2018.csv,Benign,packet_size_stats,MLP,0.9501112266060068,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,packet_size_stats,MLP,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,packet_size_stats,MLP,0.9980113636363637,0.9990046921655055,1.0,0.9980113636363637
+02-14-2018.csv,Benign,timing_iat,LogisticRegression,0.9999949784827988,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,LogisticRegression,0.0,0.0,0.0,0.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,LogisticRegression,0.0,0.0,0.0,0.0
+02-14-2018.csv,Benign,timing_iat,DecisionTree,0.7066078144850685,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,DecisionTree,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,DecisionTree,0.9980646306818182,0.9990313780202789,1.0,0.9980646306818182
+02-14-2018.csv,Benign,timing_iat,RandomForest,0.7066228790366721,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,RandomForest,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,RandomForest,0.9979936079545455,0.9989957965643801,1.0,0.9979936079545455
+02-14-2018.csv,Benign,timing_iat,ExtraTrees,0.7066027929678673,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,ExtraTrees,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,ExtraTrees,0.9980823863636363,0.9990402729890164,1.0,0.9980823863636363
+02-14-2018.csv,Benign,timing_iat,XGBoost,0.7066178575194709,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,XGBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,XGBoost,0.9980646306818182,0.9990313780202789,1.0,0.9980646306818182
+02-14-2018.csv,Benign,timing_iat,LightGBM,0.7066178575194709,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,LightGBM,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,LightGBM,0.9980823863636363,0.9990402729890164,1.0,0.9980823863636363
+02-14-2018.csv,Benign,timing_iat,CatBoost,0.7066228790366721,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,CatBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,CatBoost,0.998046875,0.9990224828934506,1.0,0.998046875
+02-14-2018.csv,Benign,timing_iat,KNN,0.9994827837282757,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,KNN,0.0,0.0,0.0,0.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,KNN,0.504296875,0.6704752012464295,1.0,0.504296875
+02-14-2018.csv,Benign,timing_iat,LinearSVC,0.7064370829002274,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,LinearSVC,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,LinearSVC,0.4937322443181818,0.6610719507411413,1.0,0.4937322443181818
+02-14-2018.csv,Benign,timing_iat,MLP,0.7018022225235132,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,timing_iat,MLP,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,timing_iat,MLP,0.998046875,0.9990224828934506,1.0,0.998046875
+02-14-2018.csv,Benign,flags_and_protocol,LogisticRegression,0.9796929844383182,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,LogisticRegression,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,LogisticRegression,0.5044566761363637,0.6706164213806045,1.0,0.5044566761363637
+02-14-2018.csv,Benign,flags_and_protocol,DecisionTree,0.9999849354483964,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-14-2018.csv,Benign,flags_and_protocol,RandomForest,0.9999949784827988,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-14-2018.csv,Benign,flags_and_protocol,ExtraTrees,0.9999949784827988,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-14-2018.csv,Benign,flags_and_protocol,XGBoost,0.9999799139311951,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,Benign,flags_and_protocol,LightGBM,1.0,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-14-2018.csv,Benign,flags_and_protocol,CatBoost,0.9999598278623903,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,Benign,flags_and_protocol,KNN,1.0,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-14-2018.csv,Benign,flags_and_protocol,LinearSVC,0.9978809197410906,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,LinearSVC,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,LinearSVC,0.5044566761363637,0.6706164213806045,1.0,0.5044566761363637
+02-14-2018.csv,Benign,flags_and_protocol,MLP,0.9981119095323461,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,flags_and_protocol,MLP,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,flags_and_protocol,MLP,1.0,1.0,1.0,1.0
+02-14-2018.csv,Benign,rates_and_ratios,LogisticRegression,0.5413747909793465,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,LogisticRegression,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,LogisticRegression,0.9404474431818182,0.9693098841571656,1.0,0.9404474431818182
+02-14-2018.csv,Benign,rates_and_ratios,DecisionTree,0.9773630004569581,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,DecisionTree,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,DecisionTree,0.9527876420454545,0.9758230967167056,1.0,0.9527876420454545
+02-14-2018.csv,Benign,rates_and_ratios,RandomForest,0.9771872473549158,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,RandomForest,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,RandomForest,0.9578657670454546,0.9784795088285706,1.0,0.9578657670454546
+02-14-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.9841621347473926,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,ExtraTrees,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,ExtraTrees,0.9398970170454546,0.9690174362729395,1.0,0.9398970170454546
+02-14-2018.csv,Benign,rates_and_ratios,XGBoost,0.9770064727356723,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,XGBoost,0.9676690302434312,0.9835688983972223,1.0,0.9676690302434312
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,XGBoost,0.9553089488636364,0.977143739273358,1.0,0.9553089488636364
+02-14-2018.csv,Benign,rates_and_ratios,LightGBM,0.9764340197747348,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,LightGBM,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,LightGBM,0.9575816761363637,0.9783312623014757,1.0,0.9575816761363637
+02-14-2018.csv,Benign,rates_and_ratios,CatBoost,0.9768307196336301,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,CatBoost,0.9709642358056001,0.9852682440061973,1.0,0.9709642358056001
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,CatBoost,0.9545454545454546,0.9767441860465116,1.0,0.9545454545454546
+02-14-2018.csv,Benign,rates_and_ratios,KNN,0.97566572764295,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,KNN,0.9708952262650311,0.9852327138717951,1.0,0.9708952262650311
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,KNN,0.9516512784090909,0.9752267620113358,1.0,0.9516512784090909
+02-14-2018.csv,Benign,rates_and_ratios,LinearSVC,0.22245321201347776,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,LinearSVC,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,LinearSVC,0.9999822443181818,0.9999911220802742,1.0,0.9999822443181818
+02-14-2018.csv,Benign,rates_and_ratios,MLP,0.7640439282324761,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,rates_and_ratios,MLP,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,rates_and_ratios,MLP,0.9836825284090909,0.9917741516814207,1.0,0.9836825284090909
+02-14-2018.csv,Benign,connection_activity,LogisticRegression,1.0,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-14-2018.csv,Benign,connection_activity,DecisionTree,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,DecisionTree,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,DecisionTree,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,connection_activity,RandomForest,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,RandomForest,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,RandomForest,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,connection_activity,ExtraTrees,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,ExtraTrees,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,ExtraTrees,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,connection_activity,XGBoost,0.9501162481232079,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,XGBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,XGBoost,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,connection_activity,LightGBM,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,LightGBM,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,LightGBM,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,connection_activity,CatBoost,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,CatBoost,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,CatBoost,0.9980113636363637,0.9990046921655055,1.0,0.9980113636363637
+02-14-2018.csv,Benign,connection_activity,KNN,0.9501212696404091,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,KNN,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,KNN,0.9981001420454545,0.9990491677996677,1.0,0.9981001420454545
+02-14-2018.csv,Benign,connection_activity,LinearSVC,0.7674535384120958,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,LinearSVC,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,LinearSVC,0.49563210227272725,0.6627727520953535,1.0,0.49563210227272725
+02-14-2018.csv,Benign,connection_activity,MLP,0.9499254304695621,0.0,0.0,0.0
+02-14-2018.csv,FTP-BruteForce,connection_activity,MLP,1.0,1.0,1.0,1.0
+02-14-2018.csv,SSH-Bruteforce,connection_activity,MLP,0.9980113636363637,0.9990046921655055,1.0,0.9980113636363637
+02-15-2018.csv,Benign,flow_metrics,LogisticRegression,0.9930435604015978,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,LogisticRegression,0.023473802275276397,0.045870841487279844,1.0,0.023473802275276397
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,LogisticRegression,0.018977655341291706,0.037248422949834784,1.0,0.018977655341291706
+02-15-2018.csv,Benign,flow_metrics,DecisionTree,0.9991498434632409,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,DecisionTree,0.9883832719115526,0.9941577017607478,1.0,0.9883832719115526
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,DecisionTree,0.982858891949801,0.9913553565915406,1.0,0.982858891949801
+02-15-2018.csv,Benign,flow_metrics,RandomForest,0.9994264817013926,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,RandomForest,0.9908668482614965,0.9954124748490946,1.0,0.9908668482614965
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,RandomForest,0.982858891949801,0.9913553565915406,1.0,0.982858891949801
+02-15-2018.csv,Benign,flow_metrics,ExtraTrees,0.9994703389830508,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,ExtraTrees,0.991748117288896,0.9958569647238646,1.0,0.991748117288896
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,ExtraTrees,0.9834710743801653,0.9916666666666667,1.0,0.9834710743801653
+02-15-2018.csv,Benign,flow_metrics,XGBoost,0.9988259743063802,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,XGBoost,0.9880628104470437,0.9939955671972597,1.0,0.9880628104470437
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,XGBoost,0.9733700642791552,0.9865053513261982,1.0,0.9733700642791552
+02-15-2018.csv,Benign,flow_metrics,LightGBM,0.9988057324840764,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,LightGBM,0.9890241948405705,0.9944818141539453,1.0,0.9890241948405705
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,LightGBM,0.9846954392408938,0.9922887106724244,1.0,0.9846954392408938
+02-15-2018.csv,Benign,flow_metrics,CatBoost,0.9984312587714563,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,CatBoost,0.9864605031244993,0.9931841096995362,1.0,0.9864605031244993
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,CatBoost,0.9724517906336089,0.9860335195530726,1.0,0.9724517906336089
+02-15-2018.csv,Benign,flow_metrics,KNN,0.9985662042534816,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,KNN,0.9875020028841531,0.9937117059013222,1.0,0.9875020028841531
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,KNN,0.9736761554943373,0.9866625310173698,1.0,0.9736761554943373
+02-15-2018.csv,Benign,flow_metrics,LinearSVC,0.9859488016841196,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,LinearSVC,0.023473802275276397,0.045870841487279844,1.0,0.023473802275276397
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,LinearSVC,0.018977655341291706,0.037248422949834784,1.0,0.018977655341291706
+02-15-2018.csv,Benign,flow_metrics,MLP,1.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flow_metrics,MLP,0.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-Slowloris,flow_metrics,MLP,0.0,0.0,0.0,0.0
+02-15-2018.csv,Benign,packet_size_stats,LogisticRegression,1.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-15-2018.csv,Benign,packet_size_stats,DecisionTree,0.9999797581776962,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,DecisionTree,0.6663996154462426,0.7998076923076923,1.0,0.6663996154462426
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,DecisionTree,0.7897153351698806,0.8825038481272447,1.0,0.7897153351698806
+02-15-2018.csv,Benign,packet_size_stats,RandomForest,1.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,RandomForest,0.6666399615446242,0.7999807720040378,1.0,0.6666399615446242
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,RandomForest,0.7900214263850628,0.8826949384404925,1.0,0.7900214263850628
+02-15-2018.csv,Benign,packet_size_stats,ExtraTrees,0.9999932527258988,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,ExtraTrees,0.6666399615446242,0.7999807720040378,1.0,0.6666399615446242
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,ExtraTrees,0.7900214263850628,0.8826949384404925,1.0,0.7900214263850628
+02-15-2018.csv,Benign,packet_size_stats,XGBoost,1.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,XGBoost,0.6666399615446242,0.7999807720040378,1.0,0.6666399615446242
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,XGBoost,0.7900214263850628,0.8826949384404925,1.0,0.7900214263850628
+02-15-2018.csv,Benign,packet_size_stats,LightGBM,1.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,LightGBM,0.6666399615446242,0.7999807720040378,1.0,0.6666399615446242
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,LightGBM,0.7900214263850628,0.8826949384404925,1.0,0.7900214263850628
+02-15-2018.csv,Benign,packet_size_stats,CatBoost,0.9999865054517975,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,CatBoost,0.6666399615446242,0.7999807720040378,1.0,0.6666399615446242
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,CatBoost,0.7900214263850628,0.8826949384404925,1.0,0.7900214263850628
+02-15-2018.csv,Benign,packet_size_stats,KNN,0.9995850426427724,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,KNN,0.660791539817337,0.7957549445248432,1.0,0.660791539817337
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,KNN,0.7900214263850628,0.8826949384404925,1.0,0.7900214263850628
+02-15-2018.csv,Benign,packet_size_stats,LinearSVC,0.9985425887941272,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,LinearSVC,0.5756289056240987,0.7306655819392892,1.0,0.5756289056240987
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,LinearSVC,0.09427609427609428,0.1723076923076923,1.0,0.09427609427609428
+02-15-2018.csv,Benign,packet_size_stats,MLP,0.9950744899060779,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,packet_size_stats,MLP,0.6660791539817337,0.799576841700327,1.0,0.6660791539817337
+02-15-2018.csv,DoS attacks-Slowloris,packet_size_stats,MLP,0.78818487909397,0.8815474152687436,1.0,0.78818487909397
+02-15-2018.csv,Benign,timing_iat,LogisticRegression,0.9561123556083342,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,LogisticRegression,0.326630347700689,0.49242103991786945,1.0,0.326630347700689
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,LogisticRegression,0.657483930211203,0.7933518005540167,1.0,0.657483930211203
+02-15-2018.csv,Benign,timing_iat,DecisionTree,0.9990553816258232,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,DecisionTree,0.9886236180099343,0.9942792683909435,1.0,0.9886236180099343
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,DecisionTree,0.9041934496479951,0.9496865455714515,1.0,0.9041934496479951
+02-15-2018.csv,Benign,timing_iat,RandomForest,0.9991633380114434,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,RandomForest,0.991748117288896,0.9958569647238646,1.0,0.991748117288896
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,RandomForest,0.9044995408631772,0.9498553519768563,1.0,0.9044995408631772
+02-15-2018.csv,Benign,timing_iat,ExtraTrees,0.9992645471229623,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,ExtraTrees,0.9889440794744432,0.9944413115282366,1.0,0.9889440794744432
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,ExtraTrees,0.903887358432813,0.9495176848874598,1.0,0.903887358432813
+02-15-2018.csv,Benign,timing_iat,XGBoost,0.9981883569038109,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,XGBoost,0.9863002723922448,0.9931028919453071,1.0,0.9863002723922448
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,XGBoost,0.8947046219773492,0.9444264943457189,1.0,0.8947046219773492
+02-15-2018.csv,Benign,timing_iat,LightGBM,0.998461621504912,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,LightGBM,0.9829354270149014,0.9913942870995112,1.0,0.9829354270149014
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,LightGBM,0.8925619834710744,0.9432314410480349,1.0,0.8925619834710744
+02-15-2018.csv,Benign,timing_iat,CatBoost,0.9979623232214185,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,CatBoost,0.9854991187309726,0.992696606544809,1.0,0.9854991187309726
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,CatBoost,0.8922558922558923,0.9430604982206405,1.0,0.8922558922558923
+02-15-2018.csv,Benign,timing_iat,KNN,0.9988900734103422,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,KNN,0.9909469636276238,0.995452899279707,1.0,0.9909469636276238
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,KNN,0.903887358432813,0.9495176848874598,1.0,0.903887358432813
+02-15-2018.csv,Benign,timing_iat,LinearSVC,0.9583558242470042,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,LinearSVC,0.3247075789136356,0.4902328394315089,1.0,0.3247075789136356
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,LinearSVC,0.657483930211203,0.7933518005540167,1.0,0.657483930211203
+02-15-2018.csv,Benign,timing_iat,MLP,0.9999696372665443,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,timing_iat,MLP,0.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-Slowloris,timing_iat,MLP,0.009794918885827977,0.019399818126705062,1.0,0.009794918885827977
+02-15-2018.csv,Benign,flags_and_protocol,LogisticRegression,0.9980804005181907,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,LogisticRegression,0.6432462746354751,0.782896982107162,1.0,0.6432462746354751
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,LogisticRegression,0.6449341903887359,0.7841458876069967,1.0,0.6449341903887359
+02-15-2018.csv,Benign,flags_and_protocol,DecisionTree,0.9999966263629494,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-15-2018.csv,Benign,flags_and_protocol,RandomForest,1.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-15-2018.csv,Benign,flags_and_protocol,ExtraTrees,0.9999966263629494,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,ExtraTrees,0.9999198846338728,0.9999599407122541,1.0,0.9999198846338728
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-15-2018.csv,Benign,flags_and_protocol,XGBoost,1.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-15-2018.csv,Benign,flags_and_protocol,LightGBM,0.9999966263629494,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-15-2018.csv,Benign,flags_and_protocol,CatBoost,0.9999966263629494,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-15-2018.csv,Benign,flags_and_protocol,KNN,0.9999932527258988,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-15-2018.csv,Benign,flags_and_protocol,LinearSVC,0.9981175105257476,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,LinearSVC,0.6432462746354751,0.782896982107162,1.0,0.6432462746354751
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,LinearSVC,0.6449341903887359,0.7841458876069967,1.0,0.6449341903887359
+02-15-2018.csv,Benign,flags_and_protocol,MLP,0.9977868940947857,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,flags_and_protocol,MLP,1.0,1.0,1.0,1.0
+02-15-2018.csv,DoS attacks-Slowloris,flags_and_protocol,MLP,1.0,1.0,1.0,1.0
+02-15-2018.csv,Benign,rates_and_ratios,LogisticRegression,0.9927129439706358,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-15-2018.csv,Benign,rates_and_ratios,DecisionTree,0.9963058674295585,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,DecisionTree,0.9375901297868932,0.9677899524498657,1.0,0.9375901297868932
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,DecisionTree,0.9568411386593205,0.9779446269357109,1.0,0.9568411386593205
+02-15-2018.csv,Benign,rates_and_ratios,RandomForest,0.9966938356903811,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,RandomForest,0.9492869732414677,0.9739838066663926,1.0,0.9492869732414677
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,RandomForest,0.9571472298745026,0.9781044729433844,1.0,0.9571472298745026
+02-15-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.9966128684011659,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,ExtraTrees,0.9355071302675854,0.9666790843991887,1.0,0.9355071302675854
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,ExtraTrees,0.9559228650137741,0.9774647887323944,1.0,0.9559228650137741
+02-15-2018.csv,Benign,rates_and_ratios,XGBoost,0.9941197506207492,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,XGBoost,0.8242268867168723,0.903645147123408,1.0,0.8242268867168723
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,XGBoost,0.9274563820018366,0.9623630300142926,1.0,0.9274563820018366
+02-15-2018.csv,Benign,rates_and_ratios,LightGBM,0.99481809349023,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,LightGBM,0.8851946803396892,0.9391016106412817,1.0,0.8851946803396892
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,LightGBM,0.9329660238751147,0.9653206650831354,1.0,0.9329660238751147
+02-15-2018.csv,Benign,rates_and_ratios,CatBoost,0.9942175860952175,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,CatBoost,0.8138118891203333,0.8973498233215548,1.0,0.8138118891203333
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,CatBoost,0.9256198347107438,0.9613733905579399,1.0,0.9256198347107438
+02-15-2018.csv,Benign,rates_and_ratios,KNN,0.9965319011119508,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,KNN,0.9555359717993911,0.9772624851489204,1.0,0.9555359717993911
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,KNN,0.9550045913682277,0.976984499765148,1.0,0.9550045913682277
+02-15-2018.csv,Benign,rates_and_ratios,LinearSVC,1.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-15-2018.csv,Benign,rates_and_ratios,MLP,0.992766922163446,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,rates_and_ratios,MLP,0.751241788174972,0.8579532458026442,1.0,0.751241788174972
+02-15-2018.csv,DoS attacks-Slowloris,rates_and_ratios,MLP,0.8438934802571166,0.9153386454183267,1.0,0.8438934802571166
+02-15-2018.csv,Benign,connection_activity,LogisticRegression,0.9993859980567851,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,LogisticRegression,0.0012818458580355712,0.0025604096655464873,1.0,0.0012818458580355712
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,LogisticRegression,0.4196510560146924,0.5912031047865459,1.0,0.4196510560146924
+02-15-2018.csv,Benign,connection_activity,DecisionTree,0.9985796988016841,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,DecisionTree,0.8268706937990706,0.9052317677498575,1.0,0.8268706937990706
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,DecisionTree,0.9883685338230793,0.9941502463054187,1.0,0.9883685338230793
+02-15-2018.csv,Benign,connection_activity,RandomForest,0.9986201824462917,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,RandomForest,0.8269508091651979,0.9052797754779863,1.0,0.8269508091651979
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,RandomForest,0.9886746250382614,0.9943050638756349,1.0,0.9886746250382614
+02-15-2018.csv,Benign,connection_activity,ExtraTrees,0.9986134351721905,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,ExtraTrees,0.8263900016023074,0.904943632934158,1.0,0.8263900016023074
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,ExtraTrees,0.9883685338230793,0.9941502463054187,1.0,0.9883685338230793
+02-15-2018.csv,Benign,connection_activity,XGBoost,0.9984683687790132,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,XGBoost,0.827351385995834,0.9055197509754921,1.0,0.827351385995834
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,XGBoost,0.9886746250382614,0.9943050638756349,1.0,0.9886746250382614
+02-15-2018.csv,Benign,connection_activity,LightGBM,0.998535841520026,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,LightGBM,0.8274315013619612,0.9055677334502411,1.0,0.8274315013619612
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,LightGBM,0.9886746250382614,0.9943050638756349,1.0,0.9886746250382614
+02-15-2018.csv,Benign,connection_activity,CatBoost,0.9984886106013171,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,CatBoost,0.8271110398974524,0.9053757783039551,1.0,0.8271110398974524
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,CatBoost,0.9856137128864402,0.9927547402497302,1.0,0.9856137128864402
+02-15-2018.csv,Benign,connection_activity,KNN,0.9977767731836338,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,KNN,0.8215029642685467,0.9020056298381421,1.0,0.8215029642685467
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,KNN,0.9865319865319865,0.9932203389830508,1.0,0.9865319865319865
+02-15-2018.csv,Benign,connection_activity,LinearSVC,0.9976418277016086,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,LinearSVC,0.0019227687870533568,0.0038381576843115306,1.0,0.0019227687870533568
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,LinearSVC,0.4251606978879706,0.5966494845360825,1.0,0.4251606978879706
+02-15-2018.csv,Benign,connection_activity,MLP,0.9974326622044694,0.0,0.0,0.0
+02-15-2018.csv,DoS attacks-GoldenEye,connection_activity,MLP,0.3329594616247396,0.49957927635533117,1.0,0.3329594616247396
+02-15-2018.csv,DoS attacks-Slowloris,connection_activity,MLP,0.31068258340985616,0.474077533862681,1.0,0.31068258340985616
+02-16-2018.csv,Benign,flow_metrics,LogisticRegression,0.9934045601050495,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,LogisticRegression,0.8368207494629645,0.9111621258717026,1.0,0.8368207494629645
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,LogisticRegression,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,DecisionTree,0.9931285066252835,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,DecisionTree,0.9814767935541266,0.9906518176210135,1.0,0.9814767935541266
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,RandomForest,0.9936209263459472,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,RandomForest,0.9829595180060611,0.9914065406584428,1.0,0.9829595180060611
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,ExtraTrees,0.9936656917750984,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,ExtraTrees,0.9802978467947837,0.9900509141909611,1.0,0.9802978467947837
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,XGBoost,0.9935463172973619,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,XGBoost,0.9803991060256475,0.9901025536142114,1.0,0.9803991060256475
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,LightGBM,0.9934493255342007,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,LightGBM,0.9814767935541266,0.9906518176210135,1.0,0.9814767935541266
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,CatBoost,0.993949206159723,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,CatBoost,0.9797264554206236,0.9897594212958735,1.0,0.9797264554206236
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,KNN,0.9916960128924436,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,KNN,0.9834224173471529,0.9916419303785928,1.0,0.9834224173471529
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,KNN,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,LinearSVC,0.989703951295213,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,LinearSVC,0.9742584569539777,0.9869614117871182,1.0,0.9742584569539777
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,LinearSVC,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flow_metrics,MLP,0.9883386057061,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flow_metrics,MLP,0.9784317838260077,0.9890983270940571,1.0,0.9784317838260077
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flow_metrics,MLP,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,LogisticRegression,0.9902859018741793,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,LogisticRegression,0.9996311270875675,0.9998155295207023,1.0,0.9996311270875675
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,LogisticRegression,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,DecisionTree,0.9958218932792169,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,RandomForest,0.9958218932792169,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,ExtraTrees,0.9958218932792169,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,XGBoost,0.9958218932792169,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,LightGBM,0.9958218932792169,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,CatBoost,0.9958218932792169,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,KNN,0.9958069714694998,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,KNN,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,KNN,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,LinearSVC,0.9904575026859257,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,LinearSVC,0.9999566031867726,0.9999783011225553,1.0,0.9999566031867726
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,LinearSVC,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,packet_size_stats,MLP,0.9958218932792169,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,packet_size_stats,MLP,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,packet_size_stats,MLP,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,LogisticRegression,0.9943371732123671,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,LogisticRegression,0.9876536066368193,0.9937884582494878,1.0,0.9876536066368193
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,LogisticRegression,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,DecisionTree,0.9956652142771876,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,DecisionTree,0.9994141430214308,0.9997069856784728,1.0,0.9994141430214308
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,RandomForest,0.9958815805180853,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,RandomForest,0.999754084725045,0.9998770272420827,1.0,0.999754084725045
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,ExtraTrees,0.9957323624209145,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,ExtraTrees,0.9982351962620878,0.9991168188103116,1.0,0.9982351962620878
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,XGBoost,0.9959188850423779,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,XGBoost,0.999688989505204,0.999844470566959,1.0,0.999688989505204
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,LightGBM,0.9959114241375194,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,LightGBM,0.9997974815382724,0.999898730514666,1.0,0.9997974815382724
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,CatBoost,0.9957771278500657,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,CatBoost,0.9996021958787493,0.9998010583694744,1.0,0.9996021958787493
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,KNN,0.995478691655724,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,KNN,0.9989223124715209,0.9994608657266191,1.0,0.9989223124715209
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,KNN,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,LinearSVC,0.9877939596514266,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,LinearSVC,0.9698392148069926,0.984688707095334,1.0,0.9698392148069926
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,LinearSVC,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,timing_iat,MLP,0.9960158768055389,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,timing_iat,MLP,0.9576447102901077,0.9783641589879628,1.0,0.9576447102901077
+02-16-2018.csv,DoS attacks-SlowHTTPTest,timing_iat,MLP,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,LogisticRegression,0.9995672675182046,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,LogisticRegression,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,LogisticRegression,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,DecisionTree,1.0,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,RandomForest,1.0,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,ExtraTrees,1.0,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,XGBoost,0.9999776172854243,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,LightGBM,1.0,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,CatBoost,0.9999477736659902,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,KNN,0.9999701563805659,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,LinearSVC,0.9991793004655605,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,LinearSVC,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,LinearSVC,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,flags_and_protocol,MLP,0.9998731646174048,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,flags_and_protocol,MLP,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,flags_and_protocol,MLP,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,LogisticRegression,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,LogisticRegression,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,DecisionTree,0.994128267876328,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,DecisionTree,0.98183120086215,0.9908323175404918,1.0,0.98183120086215
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,RandomForest,0.994128267876328,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,RandomForest,0.981455095147513,0.99064076450791,1.0,0.981455095147513
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.9960009549958219,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,ExtraTrees,0.9761534511315719,0.9879328455718996,1.0,0.9761534511315719
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,XGBoost,0.9931210457204249,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,XGBoost,0.981013894213035,0.990415965358735,1.0,0.981013894213035
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,LightGBM,0.9936134654410888,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,LightGBM,0.9812959734990128,0.9905597009476804,1.0,0.9812959734990128
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,CatBoost,0.9940387370180256,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,CatBoost,0.9800591643220333,0.9899291717958365,1.0,0.9800591643220333
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,KNN,0.9890921570968128,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,KNN,0.9849919354255419,0.9924392314615421,1.0,0.9849919354255419
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,KNN,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,LinearSVC,0.055225617762922286,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,LinearSVC,0.9556846208926725,0.9773402221227777,1.0,0.9556846208926725
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,LinearSVC,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,rates_and_ratios,MLP,0.9927703831920736,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,rates_and_ratios,MLP,0.9698970772246291,0.9847185301590565,1.0,0.9698970772246291
+02-16-2018.csv,DoS attacks-SlowHTTPTest,rates_and_ratios,MLP,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,LogisticRegression,1.0,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-16-2018.csv,Benign,connection_activity,DecisionTree,0.9962098603318611,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,DecisionTree,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,RandomForest,0.9962098603318611,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,RandomForest,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,ExtraTrees,0.9962098603318611,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,ExtraTrees,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,XGBoost,0.9961949385221439,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,XGBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,LightGBM,0.9962098603318611,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,LightGBM,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,CatBoost,0.9962098603318611,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,CatBoost,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,KNN,0.995933806852095,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,KNN,0.9984811115370428,0.9992399785746341,1.0,0.9984811115370428
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,KNN,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,LinearSVC,0.99048734630536,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,LinearSVC,0.9446690631351304,0.971547376407754,1.0,0.9446690631351304
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,LinearSVC,1.0,1.0,1.0,1.0
+02-16-2018.csv,Benign,connection_activity,MLP,0.9960233377103975,0.0,0.0,0.0
+02-16-2018.csv,DoS attacks-Hulk,connection_activity,MLP,0.9932590283453518,0.9966181155791658,1.0,0.9932590283453518
+02-16-2018.csv,DoS attacks-SlowHTTPTest,connection_activity,MLP,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flow_metrics,LogisticRegression,0.9995658198614319,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,LogisticRegression,0.6562660965061471,0.7924645657971559,1.0,0.6562660965061471
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,LogisticRegression,0.9774859287054409,0.9886148007590133,1.0,0.9774859287054409
+02-21-2018.csv,Benign,flow_metrics,DecisionTree,0.9285080831408776,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,DecisionTree,0.9255065843821372,0.9613123028391167,1.0,0.9255065843821372
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flow_metrics,RandomForest,0.9411639722863742,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,RandomForest,0.9252344623159532,0.9611654896338663,1.0,0.9252344623159532
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flow_metrics,ExtraTrees,0.9244249422632794,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,ExtraTrees,0.9290927644686331,0.9632432214575756,1.0,0.9290927644686331
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,ExtraTrees,0.99812382739212,0.9990610328638497,1.0,0.99812382739212
+02-21-2018.csv,Benign,flow_metrics,XGBoost,0.9388822170900692,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,XGBoost,0.9247776859905729,0.9609189598586215,1.0,0.9247776859905729
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,XGBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flow_metrics,LightGBM,0.9416166281755196,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,LightGBM,0.9245541571504933,0.9607982749827044,1.0,0.9245541571504933
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flow_metrics,CatBoost,0.9372748267898383,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,CatBoost,0.9241751299868798,0.9605935713275552,1.0,0.9241751299868798
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flow_metrics,KNN,0.9312794457274827,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,KNN,0.9206569804169299,0.9586896460991975,1.0,0.9206569804169299
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,KNN,0.9962476547842402,0.9981203007518797,1.0,0.9962476547842402
+02-21-2018.csv,Benign,flow_metrics,LinearSVC,0.9995288683602771,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,LinearSVC,0.7609602021478206,0.864255990816473,1.0,0.7609602021478206
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,LinearSVC,0.9793621013133208,0.9895734597156398,1.0,0.9793621013133208
+02-21-2018.csv,Benign,flow_metrics,MLP,0.9999815242494227,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flow_metrics,MLP,0.7605714563389864,0.8640052110359142,1.0,0.7605714563389864
+02-21-2018.csv,DDOS attack-LOIC-UDP,flow_metrics,MLP,0.99812382739212,0.9990610328638497,1.0,0.99812382739212
+02-21-2018.csv,Benign,packet_size_stats,LogisticRegression,0.9990023094688222,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,LogisticRegression,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,LogisticRegression,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,DecisionTree,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,RandomForest,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,ExtraTrees,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,ExtraTrees,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,ExtraTrees,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,XGBoost,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,XGBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,XGBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,LightGBM,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,CatBoost,0.9999260969976905,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,KNN,0.9999353348729793,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,LinearSVC,0.9991316397228638,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,LinearSVC,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,LinearSVC,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,packet_size_stats,MLP,0.9995565819861432,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,packet_size_stats,MLP,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,packet_size_stats,MLP,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,timing_iat,LogisticRegression,0.9994642032332564,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,LogisticRegression,0.022056465328733173,0.043160952602827,1.0,0.022056465328733173
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,LogisticRegression,0.9793621013133208,0.9895734597156398,1.0,0.9793621013133208
+02-21-2018.csv,Benign,timing_iat,DecisionTree,0.9999353348729793,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,timing_iat,RandomForest,0.9999538106235566,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,RandomForest,0.9999902813547792,0.9999951406537765,1.0,0.9999902813547792
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,timing_iat,ExtraTrees,0.9999538106235566,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,ExtraTrees,0.9999805627095583,0.9999902812603262,1.0,0.9999805627095583
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,ExtraTrees,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,timing_iat,XGBoost,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,XGBoost,0.9999222508382332,0.9999611239078248,1.0,0.9999222508382332
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,XGBoost,0.99812382739212,0.9990610328638497,1.0,0.99812382739212
+02-21-2018.csv,Benign,timing_iat,LightGBM,0.9998799076212471,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,LightGBM,0.99812382739212,0.9990610328638497,1.0,0.99812382739212
+02-21-2018.csv,Benign,timing_iat,CatBoost,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,CatBoost,0.9999416881286749,0.999970843214244,1.0,0.9999416881286749
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,CatBoost,0.99812382739212,0.9990610328638497,1.0,0.99812382739212
+02-21-2018.csv,Benign,timing_iat,KNN,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,KNN,0.99812382739212,0.9990610328638497,1.0,0.99812382739212
+02-21-2018.csv,Benign,timing_iat,LinearSVC,0.9993903002309469,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,LinearSVC,0.9847222897128141,0.9923023435740238,1.0,0.9847222897128141
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,LinearSVC,0.975609756097561,0.9876543209876543,1.0,0.975609756097561
+02-21-2018.csv,Benign,timing_iat,MLP,0.9999076212471132,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,timing_iat,MLP,0.9999416881286749,0.999970843214244,1.0,0.9999416881286749
+02-21-2018.csv,DDOS attack-LOIC-UDP,timing_iat,MLP,0.99812382739212,0.9990610328638497,1.0,0.99812382739212
+02-21-2018.csv,Benign,flags_and_protocol,LogisticRegression,0.9993071593533487,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,LogisticRegression,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+02-21-2018.csv,Benign,flags_and_protocol,DecisionTree,0.99564896073903,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flags_and_protocol,RandomForest,0.99564896073903,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flags_and_protocol,ExtraTrees,0.99564896073903,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flags_and_protocol,XGBoost,1.0,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,XGBoost,0.0,0.0,0.0,0.0
+02-21-2018.csv,Benign,flags_and_protocol,LightGBM,0.995593533487298,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flags_and_protocol,CatBoost,0.9956027713625866,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flags_and_protocol,KNN,0.995621247113164,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,flags_and_protocol,LinearSVC,0.9994642032332564,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,LinearSVC,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+02-21-2018.csv,Benign,flags_and_protocol,MLP,0.9996120092378753,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,flags_and_protocol,MLP,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,flags_and_protocol,MLP,0.0,0.0,0.0,0.0
+02-21-2018.csv,Benign,rates_and_ratios,LogisticRegression,0.9943094688221709,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,LogisticRegression,0.7609602021478206,0.864255990816473,1.0,0.7609602021478206
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,LogisticRegression,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,DecisionTree,0.9999815242494227,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,DecisionTree,0.9999854220321687,0.9999927109629547,1.0,0.9999854220321687
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,RandomForest,0.9999722863741339,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,RandomForest,0.9999854220321687,0.9999927109629547,1.0,0.9999854220321687
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.9999815242494227,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,ExtraTrees,0.9999854220321687,0.9999927109629547,1.0,0.9999854220321687
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,ExtraTrees,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,XGBoost,0.9947806004618938,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,XGBoost,0.9972593420477186,0.9986277906456197,1.0,0.9972593420477186
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,XGBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,LightGBM,0.9999722863741339,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,LightGBM,0.997536323436513,0.9987666424211759,1.0,0.997536323436513
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,CatBoost,0.9943371824480369,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,KNN,0.9999722863741339,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,LinearSVC,0.6639815242494226,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,LinearSVC,0.9949560231303757,0.9974716350580453,1.0,0.9949560231303757
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,LinearSVC,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,rates_and_ratios,MLP,0.9999722863741339,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,rates_and_ratios,MLP,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,rates_and_ratios,MLP,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,LogisticRegression,0.005598152424942263,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,LogisticRegression,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,LogisticRegression,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,DecisionTree,0.9999445727482679,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,DecisionTree,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,RandomForest,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,RandomForest,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,ExtraTrees,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,ExtraTrees,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,ExtraTrees,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,XGBoost,0.9999076212471132,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,XGBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,XGBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,LightGBM,0.9999630484988453,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,LightGBM,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,CatBoost,0.9998891454965358,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,CatBoost,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,KNN,0.9999445727482679,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,KNN,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,LinearSVC,0.9992332563510392,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,LinearSVC,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,LinearSVC,1.0,1.0,1.0,1.0
+02-21-2018.csv,Benign,connection_activity,MLP,0.9998891454965358,0.0,0.0,0.0
+02-21-2018.csv,DDOS attack-HOIC,connection_activity,MLP,1.0,1.0,1.0,1.0
+02-21-2018.csv,DDOS attack-LOIC-UDP,connection_activity,MLP,1.0,1.0,1.0,1.0
+02-22-2018.csv,Benign,flow_metrics,LogisticRegression,0.9999936057497099,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,flow_metrics,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,flow_metrics,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,flow_metrics,DecisionTree,0.9999744229988394,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,DecisionTree,0.5,0.6666666666666666,1.0,0.5
+02-22-2018.csv,Brute Force -XSS,flow_metrics,DecisionTree,0.7,0.8235294117647058,1.0,0.7
+02-22-2018.csv,SQL Injection,flow_metrics,DecisionTree,0.38461538461538464,0.5555555555555556,1.0,0.38461538461538464
+02-22-2018.csv,Benign,flow_metrics,RandomForest,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,RandomForest,0.4868421052631579,0.6548672566371682,1.0,0.4868421052631579
+02-22-2018.csv,Brute Force -XSS,flow_metrics,RandomForest,0.5,0.6666666666666666,1.0,0.5
+02-22-2018.csv,SQL Injection,flow_metrics,RandomForest,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,flow_metrics,ExtraTrees,0.9999776201239845,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,ExtraTrees,0.5263157894736842,0.6896551724137931,1.0,0.5263157894736842
+02-22-2018.csv,Brute Force -XSS,flow_metrics,ExtraTrees,0.6,0.75,1.0,0.6
+02-22-2018.csv,SQL Injection,flow_metrics,ExtraTrees,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,flow_metrics,XGBoost,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,XGBoost,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,flow_metrics,XGBoost,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,flow_metrics,XGBoost,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,flow_metrics,LightGBM,0.9999904086245648,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,LightGBM,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,flow_metrics,LightGBM,0.65,0.7878787878787878,1.0,0.65
+02-22-2018.csv,SQL Injection,flow_metrics,LightGBM,0.38461538461538464,0.5555555555555556,1.0,0.38461538461538464
+02-22-2018.csv,Benign,flow_metrics,CatBoost,0.9999968028748549,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,CatBoost,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,flow_metrics,CatBoost,0.65,0.7878787878787878,1.0,0.65
+02-22-2018.csv,SQL Injection,flow_metrics,CatBoost,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,flow_metrics,KNN,0.9999744229988394,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,KNN,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,flow_metrics,KNN,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,flow_metrics,KNN,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,flow_metrics,LinearSVC,0.9999968028748549,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,flow_metrics,MLP,0.9999648316234042,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flow_metrics,MLP,0.2894736842105263,0.4489795918367347,1.0,0.2894736842105263
+02-22-2018.csv,Brute Force -XSS,flow_metrics,MLP,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,flow_metrics,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,packet_size_stats,LogisticRegression,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,packet_size_stats,DecisionTree,0.9999968028748549,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,DecisionTree,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,DecisionTree,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,packet_size_stats,DecisionTree,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,packet_size_stats,RandomForest,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,RandomForest,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,RandomForest,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,packet_size_stats,RandomForest,0.38461538461538464,0.5555555555555556,1.0,0.38461538461538464
+02-22-2018.csv,Benign,packet_size_stats,ExtraTrees,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,ExtraTrees,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,ExtraTrees,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,packet_size_stats,ExtraTrees,0.46153846153846156,0.631578947368421,1.0,0.46153846153846156
+02-22-2018.csv,Benign,packet_size_stats,XGBoost,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,XGBoost,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,XGBoost,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,packet_size_stats,XGBoost,0.46153846153846156,0.631578947368421,1.0,0.46153846153846156
+02-22-2018.csv,Benign,packet_size_stats,LightGBM,0.9999936057497099,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,LightGBM,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,LightGBM,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,packet_size_stats,LightGBM,0.46153846153846156,0.631578947368421,1.0,0.46153846153846156
+02-22-2018.csv,Benign,packet_size_stats,CatBoost,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,CatBoost,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,CatBoost,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,packet_size_stats,CatBoost,0.38461538461538464,0.5555555555555556,1.0,0.38461538461538464
+02-22-2018.csv,Benign,packet_size_stats,KNN,0.9999904086245648,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,KNN,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,KNN,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,packet_size_stats,KNN,0.15384615384615385,0.26666666666666666,1.0,0.15384615384615385
+02-22-2018.csv,Benign,packet_size_stats,LinearSVC,0.9999872114994197,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,LinearSVC,0.2894736842105263,0.4489795918367347,1.0,0.2894736842105263
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,LinearSVC,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,packet_size_stats,LinearSVC,0.23076923076923078,0.375,1.0,0.23076923076923078
+02-22-2018.csv,Benign,packet_size_stats,MLP,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,packet_size_stats,MLP,0.2894736842105263,0.4489795918367347,1.0,0.2894736842105263
+02-22-2018.csv,Brute Force -XSS,packet_size_stats,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,packet_size_stats,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,timing_iat,LogisticRegression,0.9999936057497099,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,timing_iat,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,timing_iat,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,timing_iat,DecisionTree,0.9999776201239845,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,DecisionTree,0.47368421052631576,0.6428571428571429,1.0,0.47368421052631576
+02-22-2018.csv,Brute Force -XSS,timing_iat,DecisionTree,0.6,0.75,1.0,0.6
+02-22-2018.csv,SQL Injection,timing_iat,DecisionTree,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,timing_iat,RandomForest,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,RandomForest,0.5,0.6666666666666666,1.0,0.5
+02-22-2018.csv,Brute Force -XSS,timing_iat,RandomForest,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,timing_iat,RandomForest,0.15384615384615385,0.26666666666666666,1.0,0.15384615384615385
+02-22-2018.csv,Benign,timing_iat,ExtraTrees,0.9999904086245648,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,ExtraTrees,0.5263157894736842,0.6896551724137931,1.0,0.5263157894736842
+02-22-2018.csv,Brute Force -XSS,timing_iat,ExtraTrees,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,timing_iat,ExtraTrees,0.23076923076923078,0.375,1.0,0.23076923076923078
+02-22-2018.csv,Benign,timing_iat,XGBoost,0.9999904086245648,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,XGBoost,0.5263157894736842,0.6896551724137931,1.0,0.5263157894736842
+02-22-2018.csv,Brute Force -XSS,timing_iat,XGBoost,0.6,0.75,1.0,0.6
+02-22-2018.csv,SQL Injection,timing_iat,XGBoost,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,timing_iat,LightGBM,0.9999840143742746,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,LightGBM,0.4868421052631579,0.6548672566371682,1.0,0.4868421052631579
+02-22-2018.csv,Brute Force -XSS,timing_iat,LightGBM,0.65,0.7878787878787878,1.0,0.65
+02-22-2018.csv,SQL Injection,timing_iat,LightGBM,0.23076923076923078,0.375,1.0,0.23076923076923078
+02-22-2018.csv,Benign,timing_iat,CatBoost,0.9999936057497099,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,CatBoost,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,timing_iat,CatBoost,0.6,0.75,1.0,0.6
+02-22-2018.csv,SQL Injection,timing_iat,CatBoost,0.15384615384615385,0.26666666666666666,1.0,0.15384615384615385
+02-22-2018.csv,Benign,timing_iat,KNN,0.9999776201239845,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,KNN,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,timing_iat,KNN,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,timing_iat,KNN,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,timing_iat,LinearSVC,0.9999872114994197,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,LinearSVC,0.25,0.4,1.0,0.25
+02-22-2018.csv,Brute Force -XSS,timing_iat,LinearSVC,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,timing_iat,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,timing_iat,MLP,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,timing_iat,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,timing_iat,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,timing_iat,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,flags_and_protocol,LogisticRegression,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,flags_and_protocol,DecisionTree,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-22-2018.csv,SQL Injection,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-22-2018.csv,Benign,flags_and_protocol,RandomForest,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-22-2018.csv,SQL Injection,flags_and_protocol,RandomForest,0.9230769230769231,0.96,1.0,0.9230769230769231
+02-22-2018.csv,Benign,flags_and_protocol,ExtraTrees,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-22-2018.csv,SQL Injection,flags_and_protocol,ExtraTrees,0.9230769230769231,0.96,1.0,0.9230769230769231
+02-22-2018.csv,Benign,flags_and_protocol,XGBoost,0.9999904086245648,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-22-2018.csv,SQL Injection,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-22-2018.csv,Benign,flags_and_protocol,LightGBM,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-22-2018.csv,SQL Injection,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-22-2018.csv,Benign,flags_and_protocol,CatBoost,0.9999936057497099,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-22-2018.csv,SQL Injection,flags_and_protocol,CatBoost,0.9230769230769231,0.96,1.0,0.9230769230769231
+02-22-2018.csv,Benign,flags_and_protocol,KNN,0.9999968028748549,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,KNN,0.85,0.918918918918919,1.0,0.85
+02-22-2018.csv,SQL Injection,flags_and_protocol,KNN,1.0,1.0,1.0,1.0
+02-22-2018.csv,Benign,flags_and_protocol,LinearSVC,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,flags_and_protocol,MLP,0.9999808172491296,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,flags_and_protocol,MLP,0.4605263157894737,0.6306306306306306,1.0,0.4605263157894737
+02-22-2018.csv,Brute Force -XSS,flags_and_protocol,MLP,0.4,0.5714285714285714,1.0,0.4
+02-22-2018.csv,SQL Injection,flags_and_protocol,MLP,0.5384615384615384,0.7,1.0,0.5384615384615384
+02-22-2018.csv,Benign,rates_and_ratios,LogisticRegression,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,rates_and_ratios,DecisionTree,0.9999520431228239,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,DecisionTree,0.40789473684210525,0.5794392523364486,1.0,0.40789473684210525
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,DecisionTree,0.25,0.4,1.0,0.25
+02-22-2018.csv,SQL Injection,rates_and_ratios,DecisionTree,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,rates_and_ratios,RandomForest,0.9999584373731141,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,RandomForest,0.4342105263157895,0.6055045871559633,1.0,0.4342105263157895
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,RandomForest,0.25,0.4,1.0,0.25
+02-22-2018.csv,SQL Injection,rates_and_ratios,RandomForest,0.07692307692307693,0.14285714285714285,1.0,0.07692307692307693
+02-22-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.9999360574970986,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,ExtraTrees,0.4473684210526316,0.6181818181818182,1.0,0.4473684210526316
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,ExtraTrees,0.3,0.46153846153846156,1.0,0.3
+02-22-2018.csv,SQL Injection,rates_and_ratios,ExtraTrees,0.15384615384615385,0.26666666666666666,1.0,0.15384615384615385
+02-22-2018.csv,Benign,rates_and_ratios,XGBoost,0.9999904086245648,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,XGBoost,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,XGBoost,0.25,0.4,1.0,0.25
+02-22-2018.csv,SQL Injection,rates_and_ratios,XGBoost,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,rates_and_ratios,LightGBM,0.9999392546222436,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,LightGBM,0.15789473684210525,0.2727272727272727,1.0,0.15789473684210525
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,LightGBM,0.25,0.4,1.0,0.25
+02-22-2018.csv,SQL Injection,rates_and_ratios,LightGBM,0.07692307692307693,0.14285714285714285,1.0,0.07692307692307693
+02-22-2018.csv,Benign,rates_and_ratios,CatBoost,0.9999936057497099,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,CatBoost,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,CatBoost,0.2,0.3333333333333333,1.0,0.2
+02-22-2018.csv,SQL Injection,rates_and_ratios,CatBoost,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,rates_and_ratios,KNN,0.9999776201239845,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,KNN,0.47368421052631576,0.6428571428571429,1.0,0.47368421052631576
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,KNN,0.3,0.46153846153846156,1.0,0.3
+02-22-2018.csv,SQL Injection,rates_and_ratios,KNN,0.07692307692307693,0.14285714285714285,1.0,0.07692307692307693
+02-22-2018.csv,Benign,rates_and_ratios,LinearSVC,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,rates_and_ratios,MLP,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,rates_and_ratios,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,rates_and_ratios,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,rates_and_ratios,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,connection_activity,LogisticRegression,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,connection_activity,DecisionTree,0.9999840143742746,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,DecisionTree,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,connection_activity,DecisionTree,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,connection_activity,DecisionTree,0.23076923076923078,0.375,1.0,0.23076923076923078
+02-22-2018.csv,Benign,connection_activity,RandomForest,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,RandomForest,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,connection_activity,RandomForest,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,connection_activity,RandomForest,0.15384615384615385,0.26666666666666666,1.0,0.15384615384615385
+02-22-2018.csv,Benign,connection_activity,ExtraTrees,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,ExtraTrees,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,connection_activity,ExtraTrees,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,connection_activity,ExtraTrees,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,connection_activity,XGBoost,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,XGBoost,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,connection_activity,XGBoost,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,connection_activity,XGBoost,0.23076923076923078,0.375,1.0,0.23076923076923078
+02-22-2018.csv,Benign,connection_activity,LightGBM,0.9999840143742746,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,LightGBM,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,connection_activity,LightGBM,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,connection_activity,LightGBM,0.3076923076923077,0.47058823529411764,1.0,0.3076923076923077
+02-22-2018.csv,Benign,connection_activity,CatBoost,1.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,CatBoost,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,connection_activity,CatBoost,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,connection_activity,CatBoost,0.07692307692307693,0.14285714285714285,1.0,0.07692307692307693
+02-22-2018.csv,Benign,connection_activity,KNN,0.9999968028748549,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,KNN,0.5131578947368421,0.6782608695652174,1.0,0.5131578947368421
+02-22-2018.csv,Brute Force -XSS,connection_activity,KNN,0.55,0.7096774193548387,1.0,0.55
+02-22-2018.csv,SQL Injection,connection_activity,KNN,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,connection_activity,LinearSVC,0.9997186529872338,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,connection_activity,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,connection_activity,LinearSVC,0.0,0.0,0.0,0.0
+02-22-2018.csv,Benign,connection_activity,MLP,0.9999936057497099,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -Web,connection_activity,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,Brute Force -XSS,connection_activity,MLP,0.0,0.0,0.0,0.0
+02-22-2018.csv,SQL Injection,connection_activity,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,flow_metrics,LogisticRegression,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,flow_metrics,LogisticRegression,0.3684210526315789,0.5384615384615384,1.0,0.3684210526315789
+02-23-2018.csv,SQL Injection,flow_metrics,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,flow_metrics,DecisionTree,0.9999168508207783,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,DecisionTree,0.4322033898305085,0.6035502958579881,1.0,0.4322033898305085
+02-23-2018.csv,Brute Force -XSS,flow_metrics,DecisionTree,0.47368421052631576,0.6428571428571429,1.0,0.47368421052631576
+02-23-2018.csv,SQL Injection,flow_metrics,DecisionTree,0.2857142857142857,0.4444444444444444,1.0,0.2857142857142857
+02-23-2018.csv,Benign,flow_metrics,RandomForest,0.999990405863936,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,RandomForest,0.3983050847457627,0.5696969696969697,1.0,0.3983050847457627
+02-23-2018.csv,Brute Force -XSS,flow_metrics,RandomForest,0.3684210526315789,0.5384615384615384,1.0,0.3684210526315789
+02-23-2018.csv,SQL Injection,flow_metrics,RandomForest,0.2857142857142857,0.4444444444444444,1.0,0.2857142857142857
+02-23-2018.csv,Benign,flow_metrics,ExtraTrees,0.9999680195464532,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,ExtraTrees,0.4661016949152542,0.6358381502890174,1.0,0.4661016949152542
+02-23-2018.csv,Brute Force -XSS,flow_metrics,ExtraTrees,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,flow_metrics,ExtraTrees,0.35714285714285715,0.5263157894736842,1.0,0.35714285714285715
+02-23-2018.csv,Benign,flow_metrics,XGBoost,0.9999936039092906,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,XGBoost,0.3559322033898305,0.525,1.0,0.3559322033898305
+02-23-2018.csv,Brute Force -XSS,flow_metrics,XGBoost,0.5526315789473685,0.711864406779661,1.0,0.5526315789473685
+02-23-2018.csv,SQL Injection,flow_metrics,XGBoost,0.35714285714285715,0.5263157894736842,1.0,0.35714285714285715
+02-23-2018.csv,Benign,flow_metrics,LightGBM,0.9999872078185813,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,LightGBM,0.3474576271186441,0.5157232704402516,1.0,0.3474576271186441
+02-23-2018.csv,Brute Force -XSS,flow_metrics,LightGBM,0.5263157894736842,0.6896551724137931,1.0,0.5263157894736842
+02-23-2018.csv,SQL Injection,flow_metrics,LightGBM,0.35714285714285715,0.5263157894736842,1.0,0.35714285714285715
+02-23-2018.csv,Benign,flow_metrics,CatBoost,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,CatBoost,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,flow_metrics,CatBoost,0.5526315789473685,0.711864406779661,1.0,0.5526315789473685
+02-23-2018.csv,SQL Injection,flow_metrics,CatBoost,0.35714285714285715,0.5263157894736842,1.0,0.35714285714285715
+02-23-2018.csv,Benign,flow_metrics,KNN,0.9999808117278719,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,KNN,0.3474576271186441,0.5157232704402516,1.0,0.3474576271186441
+02-23-2018.csv,Brute Force -XSS,flow_metrics,KNN,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,flow_metrics,KNN,0.2857142857142857,0.4444444444444444,1.0,0.2857142857142857
+02-23-2018.csv,Benign,flow_metrics,LinearSVC,0.9996737993738227,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,flow_metrics,MLP,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flow_metrics,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,flow_metrics,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,flow_metrics,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,packet_size_stats,LogisticRegression,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,packet_size_stats,DecisionTree,0.9999872078185813,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,DecisionTree,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,DecisionTree,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,packet_size_stats,DecisionTree,0.35714285714285715,0.5263157894736842,1.0,0.35714285714285715
+02-23-2018.csv,Benign,packet_size_stats,RandomForest,0.9999968019546454,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,RandomForest,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,RandomForest,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,packet_size_stats,RandomForest,0.35714285714285715,0.5263157894736842,1.0,0.35714285714285715
+02-23-2018.csv,Benign,packet_size_stats,ExtraTrees,0.9999936039092906,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,ExtraTrees,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,ExtraTrees,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,packet_size_stats,ExtraTrees,0.42857142857142855,0.6,1.0,0.42857142857142855
+02-23-2018.csv,Benign,packet_size_stats,XGBoost,0.9999968019546454,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,XGBoost,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,XGBoost,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,packet_size_stats,XGBoost,0.14285714285714285,0.25,1.0,0.14285714285714285
+02-23-2018.csv,Benign,packet_size_stats,LightGBM,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,LightGBM,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,LightGBM,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,packet_size_stats,LightGBM,0.42857142857142855,0.6,1.0,0.42857142857142855
+02-23-2018.csv,Benign,packet_size_stats,CatBoost,0.9999968019546454,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,CatBoost,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,CatBoost,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,packet_size_stats,CatBoost,0.35714285714285715,0.5263157894736842,1.0,0.35714285714285715
+02-23-2018.csv,Benign,packet_size_stats,KNN,0.999990405863936,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,KNN,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,KNN,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,packet_size_stats,KNN,0.07142857142857142,0.13333333333333333,1.0,0.07142857142857142
+02-23-2018.csv,Benign,packet_size_stats,LinearSVC,0.9999936039092906,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,LinearSVC,0.1864406779661017,0.3142857142857143,1.0,0.1864406779661017
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,LinearSVC,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,packet_size_stats,LinearSVC,0.07142857142857142,0.13333333333333333,1.0,0.07142857142857142
+02-23-2018.csv,Benign,packet_size_stats,MLP,0.9999776136825173,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,packet_size_stats,MLP,0.1864406779661017,0.3142857142857143,1.0,0.1864406779661017
+02-23-2018.csv,Brute Force -XSS,packet_size_stats,MLP,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,packet_size_stats,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,timing_iat,LogisticRegression,0.9998752762311676,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,LogisticRegression,0.17796610169491525,0.302158273381295,1.0,0.17796610169491525
+02-23-2018.csv,Brute Force -XSS,timing_iat,LogisticRegression,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,timing_iat,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,timing_iat,DecisionTree,0.9999264449568424,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,DecisionTree,0.4406779661016949,0.611764705882353,1.0,0.4406779661016949
+02-23-2018.csv,Brute Force -XSS,timing_iat,DecisionTree,0.47368421052631576,0.6428571428571429,1.0,0.47368421052631576
+02-23-2018.csv,SQL Injection,timing_iat,DecisionTree,0.21428571428571427,0.35294117647058826,1.0,0.21428571428571427
+02-23-2018.csv,Benign,timing_iat,RandomForest,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,RandomForest,0.4152542372881356,0.5868263473053892,1.0,0.4152542372881356
+02-23-2018.csv,Brute Force -XSS,timing_iat,RandomForest,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,timing_iat,RandomForest,0.14285714285714285,0.25,1.0,0.14285714285714285
+02-23-2018.csv,Benign,timing_iat,ExtraTrees,0.9999776136825173,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,ExtraTrees,0.4491525423728814,0.6198830409356725,1.0,0.4491525423728814
+02-23-2018.csv,Brute Force -XSS,timing_iat,ExtraTrees,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,timing_iat,ExtraTrees,0.21428571428571427,0.35294117647058826,1.0,0.21428571428571427
+02-23-2018.csv,Benign,timing_iat,XGBoost,0.9999968019546454,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,XGBoost,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,timing_iat,XGBoost,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,timing_iat,XGBoost,0.14285714285714285,0.25,1.0,0.14285714285714285
+02-23-2018.csv,Benign,timing_iat,LightGBM,0.9999968019546454,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,LightGBM,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,timing_iat,LightGBM,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,timing_iat,LightGBM,0.21428571428571427,0.35294117647058826,1.0,0.21428571428571427
+02-23-2018.csv,Benign,timing_iat,CatBoost,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,CatBoost,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,timing_iat,CatBoost,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,timing_iat,CatBoost,0.14285714285714285,0.25,1.0,0.14285714285714285
+02-23-2018.csv,Benign,timing_iat,KNN,0.9999616234557438,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,KNN,0.3898305084745763,0.5609756097560976,1.0,0.3898305084745763
+02-23-2018.csv,Brute Force -XSS,timing_iat,KNN,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,timing_iat,KNN,0.35714285714285715,0.5263157894736842,1.0,0.35714285714285715
+02-23-2018.csv,Benign,timing_iat,LinearSVC,0.9997025817820149,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,LinearSVC,0.17796610169491525,0.302158273381295,1.0,0.17796610169491525
+02-23-2018.csv,Brute Force -XSS,timing_iat,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,timing_iat,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,timing_iat,MLP,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,timing_iat,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,timing_iat,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,timing_iat,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,flags_and_protocol,LogisticRegression,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,flags_and_protocol,DecisionTree,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,DecisionTree,0.635593220338983,0.7772020725388601,1.0,0.635593220338983
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,DecisionTree,1.0,1.0,1.0,1.0
+02-23-2018.csv,Benign,flags_and_protocol,RandomForest,0.9999936039092906,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,RandomForest,0.635593220338983,0.7772020725388601,1.0,0.635593220338983
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,RandomForest,1.0,1.0,1.0,1.0
+02-23-2018.csv,Benign,flags_and_protocol,ExtraTrees,0.9999936039092906,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,ExtraTrees,0.635593220338983,0.7772020725388601,1.0,0.635593220338983
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,ExtraTrees,1.0,1.0,1.0,1.0
+02-23-2018.csv,Benign,flags_and_protocol,XGBoost,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,XGBoost,0.635593220338983,0.7772020725388601,1.0,0.635593220338983
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,XGBoost,1.0,1.0,1.0,1.0
+02-23-2018.csv,Benign,flags_and_protocol,LightGBM,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,LightGBM,0.635593220338983,0.7772020725388601,1.0,0.635593220338983
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,LightGBM,1.0,1.0,1.0,1.0
+02-23-2018.csv,Benign,flags_and_protocol,CatBoost,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,CatBoost,0.635593220338983,0.7772020725388601,1.0,0.635593220338983
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,CatBoost,1.0,1.0,1.0,1.0
+02-23-2018.csv,Benign,flags_and_protocol,KNN,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,KNN,0.6271186440677966,0.7708333333333334,1.0,0.6271186440677966
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,KNN,0.9736842105263158,0.9866666666666667,1.0,0.9736842105263158
+02-23-2018.csv,SQL Injection,flags_and_protocol,KNN,0.8571428571428571,0.9230769230769231,1.0,0.8571428571428571
+02-23-2018.csv,Benign,flags_and_protocol,LinearSVC,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,flags_and_protocol,MLP,0.9999168508207783,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,flags_and_protocol,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,flags_and_protocol,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,flags_and_protocol,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,rates_and_ratios,LogisticRegression,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,rates_and_ratios,DecisionTree,0.9999520293196799,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,DecisionTree,0.3389830508474576,0.5063291139240507,1.0,0.3389830508474576
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,DecisionTree,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,rates_and_ratios,DecisionTree,0.21428571428571427,0.35294117647058826,1.0,0.21428571428571427
+02-23-2018.csv,Benign,rates_and_ratios,RandomForest,0.9999456332289705,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,RandomForest,0.3559322033898305,0.525,1.0,0.3559322033898305
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,RandomForest,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,rates_and_ratios,RandomForest,0.21428571428571427,0.35294117647058826,1.0,0.21428571428571427
+02-23-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.9999616234557438,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,ExtraTrees,0.3728813559322034,0.5432098765432098,1.0,0.3728813559322034
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,ExtraTrees,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,rates_and_ratios,ExtraTrees,0.21428571428571427,0.35294117647058826,1.0,0.21428571428571427
+02-23-2018.csv,Benign,rates_and_ratios,XGBoost,0.9999936039092906,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,XGBoost,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,XGBoost,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,rates_and_ratios,XGBoost,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,rates_and_ratios,LightGBM,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,LightGBM,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,LightGBM,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,rates_and_ratios,LightGBM,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,rates_and_ratios,CatBoost,0.999990405863936,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,CatBoost,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,CatBoost,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,rates_and_ratios,CatBoost,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,rates_and_ratios,KNN,0.9999648215010986,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,KNN,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,KNN,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,rates_and_ratios,KNN,0.21428571428571427,0.35294117647058826,1.0,0.21428571428571427
+02-23-2018.csv,Benign,rates_and_ratios,LinearSVC,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,rates_and_ratios,MLP,1.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,rates_and_ratios,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,rates_and_ratios,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,rates_and_ratios,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,connection_activity,LogisticRegression,0.9999616234557438,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,connection_activity,DecisionTree,0.9999200488661331,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,DecisionTree,0.4830508474576271,0.6514285714285715,1.0,0.4830508474576271
+02-23-2018.csv,Brute Force -XSS,connection_activity,DecisionTree,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,connection_activity,DecisionTree,0.14285714285714285,0.25,1.0,0.14285714285714285
+02-23-2018.csv,Benign,connection_activity,RandomForest,0.999990405863936,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,RandomForest,0.4067796610169492,0.5783132530120482,1.0,0.4067796610169492
+02-23-2018.csv,Brute Force -XSS,connection_activity,RandomForest,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,connection_activity,RandomForest,0.14285714285714285,0.25,1.0,0.14285714285714285
+02-23-2018.csv,Benign,connection_activity,ExtraTrees,0.9999776136825173,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,ExtraTrees,0.4576271186440678,0.627906976744186,1.0,0.4576271186440678
+02-23-2018.csv,Brute Force -XSS,connection_activity,ExtraTrees,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,connection_activity,ExtraTrees,0.14285714285714285,0.25,1.0,0.14285714285714285
+02-23-2018.csv,Benign,connection_activity,XGBoost,0.9999808117278719,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,XGBoost,0.3644067796610169,0.5341614906832298,1.0,0.3644067796610169
+02-23-2018.csv,Brute Force -XSS,connection_activity,XGBoost,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,connection_activity,XGBoost,0.07142857142857142,0.13333333333333333,1.0,0.07142857142857142
+02-23-2018.csv,Benign,connection_activity,LightGBM,0.9999712175918078,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,LightGBM,0.3728813559322034,0.5432098765432098,1.0,0.3728813559322034
+02-23-2018.csv,Brute Force -XSS,connection_activity,LightGBM,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,connection_activity,LightGBM,0.14285714285714285,0.25,1.0,0.14285714285714285
+02-23-2018.csv,Benign,connection_activity,CatBoost,0.999990405863936,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,CatBoost,0.3728813559322034,0.5432098765432098,1.0,0.3728813559322034
+02-23-2018.csv,Brute Force -XSS,connection_activity,CatBoost,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,connection_activity,CatBoost,0.07142857142857142,0.13333333333333333,1.0,0.07142857142857142
+02-23-2018.csv,Benign,connection_activity,KNN,0.9999584254103892,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,KNN,0.3898305084745763,0.5609756097560976,1.0,0.3898305084745763
+02-23-2018.csv,Brute Force -XSS,connection_activity,KNN,0.39473684210526316,0.5660377358490566,1.0,0.39473684210526316
+02-23-2018.csv,SQL Injection,connection_activity,KNN,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,connection_activity,LinearSVC,0.9997249680994976,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,connection_activity,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,SQL Injection,connection_activity,LinearSVC,0.0,0.0,0.0,0.0
+02-23-2018.csv,Benign,connection_activity,MLP,0.9999936039092906,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -Web,connection_activity,MLP,0.0,0.0,0.0,0.0
+02-23-2018.csv,Brute Force -XSS,connection_activity,MLP,0.42105263157894735,0.5925925925925926,1.0,0.42105263157894735
+02-23-2018.csv,SQL Injection,connection_activity,MLP,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,flow_metrics,LogisticRegression,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,LogisticRegression,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,flow_metrics,DecisionTree,0.9867945544554455,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,DecisionTree,0.027551169947730936,0.05362491086284763,1.0,0.027551169947730936
+02-28-2018.csv,Benign,flow_metrics,RandomForest,0.9441522277227723,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,RandomForest,0.03160568609252113,0.06127474192631878,1.0,0.03160568609252113
+02-28-2018.csv,Benign,flow_metrics,ExtraTrees,0.9397710396039604,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,ExtraTrees,0.02628108055297738,0.051216145461468895,1.0,0.02628108055297738
+02-28-2018.csv,Benign,flow_metrics,XGBoost,0.9995792079207921,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,XGBoost,0.006399296565873675,0.012717211921172701,1.0,0.006399296565873675
+02-28-2018.csv,Benign,flow_metrics,LightGBM,0.9999133663366336,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,LightGBM,0.006448146157979581,0.012813667912439935,1.0,0.006448146157979581
+02-28-2018.csv,Benign,flow_metrics,CatBoost,0.9995544554455446,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,CatBoost,0.006594694934297298,0.01310297971464622,1.0,0.006594694934297298
+02-28-2018.csv,Benign,flow_metrics,KNN,0.9597091584158416,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,KNN,0.07522837184309511,0.13993003498250875,1.0,0.07522837184309511
+02-28-2018.csv,Benign,flow_metrics,LinearSVC,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,flow_metrics,MLP,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flow_metrics,MLP,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,packet_size_stats,LogisticRegression,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,packet_size_stats,DecisionTree,0.9965532178217822,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,DecisionTree,0.0018562845000244248,0.0037056901847969184,1.0,0.0018562845000244248
+02-28-2018.csv,Benign,packet_size_stats,RandomForest,0.9917450495049505,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,RandomForest,0.0026867275658248252,0.0053590568060021436,1.0,0.0026867275658248252
+02-28-2018.csv,Benign,packet_size_stats,ExtraTrees,0.9920420792079208,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,ExtraTrees,0.0025401787895071074,0.005067485260439507,1.0,0.0025401787895071074
+02-28-2018.csv,Benign,packet_size_stats,XGBoost,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,XGBoost,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,packet_size_stats,LightGBM,0.9998019801980198,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,LightGBM,0.002198231644765766,0.004386820042893352,1.0,0.002198231644765766
+02-28-2018.csv,Benign,packet_size_stats,CatBoost,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,CatBoost,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,packet_size_stats,KNN,0.9734715346534654,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,KNN,0.04157100288212594,0.07982365631741863,1.0,0.04157100288212594
+02-28-2018.csv,Benign,packet_size_stats,LinearSVC,0.9998576732673268,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,LinearSVC,0.00014654877631771775,0.00029305460584155515,1.0,0.00014654877631771775
+02-28-2018.csv,Benign,packet_size_stats,MLP,0.9999938118811881,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,packet_size_stats,MLP,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,timing_iat,LogisticRegression,0.9926980198019802,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,LogisticRegression,0.011675052513311513,0.023080637373249637,1.0,0.011675052513311513
+02-28-2018.csv,Benign,timing_iat,DecisionTree,0.9889975247524753,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,DecisionTree,0.029602852816178984,0.057503439768468,1.0,0.029602852816178984
+02-28-2018.csv,Benign,timing_iat,RandomForest,0.9645358910891089,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,RandomForest,0.030433295881979384,0.05906892955342752,1.0,0.030433295881979384
+02-28-2018.csv,Benign,timing_iat,ExtraTrees,0.9618811881188118,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,ExtraTrees,0.03180108446094475,0.06164188997254048,1.0,0.03180108446094475
+02-28-2018.csv,Benign,timing_iat,XGBoost,0.999585396039604,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,XGBoost,0.009086024131698501,0.018008423294766908,1.0,0.009086024131698501
+02-28-2018.csv,Benign,timing_iat,LightGBM,0.9995482673267326,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,LightGBM,0.010844609447511113,0.021456531194123617,1.0,0.010844609447511113
+02-28-2018.csv,Benign,timing_iat,CatBoost,0.9998329207920792,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,CatBoost,0.00801133310536857,0.01589532347952508,1.0,0.00801133310536857
+02-28-2018.csv,Benign,timing_iat,KNN,0.9755321782178218,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,KNN,0.038933124908407016,0.07494827910475832,1.0,0.038933124908407016
+02-28-2018.csv,Benign,timing_iat,LinearSVC,0.9871039603960396,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,LinearSVC,0.022324263592399002,0.04367354740061162,1.0,0.022324263592399002
+02-28-2018.csv,Benign,timing_iat,MLP,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,timing_iat,MLP,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,flags_and_protocol,LogisticRegression,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,flags_and_protocol,DecisionTree,0.9925990099009901,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,DecisionTree,0.0038591177763665674,0.007688564476885645,1.0,0.0038591177763665674
+02-28-2018.csv,Benign,flags_and_protocol,RandomForest,0.985309405940594,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,RandomForest,0.0063015973816618635,0.012524271844660194,1.0,0.0063015973816618635
+02-28-2018.csv,Benign,flags_and_protocol,ExtraTrees,0.9861138613861387,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,ExtraTrees,0.005568853500073275,0.011076026232693709,1.0,0.005568853500073275
+02-28-2018.csv,Benign,flags_and_protocol,XGBoost,0.9999876237623763,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,XGBoost,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,flags_and_protocol,LightGBM,0.9998081683168317,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,LightGBM,0.00019539836842362367,0.0003907203907203907,1.0,0.00019539836842362367
+02-28-2018.csv,Benign,flags_and_protocol,CatBoost,0.9999814356435643,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,CatBoost,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,flags_and_protocol,KNN,0.9718007425742574,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,KNN,0.031410287724097506,0.06090745476934735,1.0,0.031410287724097506
+02-28-2018.csv,Benign,flags_and_protocol,LinearSVC,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,flags_and_protocol,MLP,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,flags_and_protocol,MLP,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,rates_and_ratios,LogisticRegression,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,rates_and_ratios,DecisionTree,0.9929950495049505,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,DecisionTree,0.0018562845000244248,0.0037056901847969184,1.0,0.0018562845000244248
+02-28-2018.csv,Benign,rates_and_ratios,RandomForest,0.9494863861386139,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,RandomForest,0.009769918421181183,0.019350781287794494,1.0,0.009769918421181183
+02-28-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.9506930693069306,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,ExtraTrees,0.008353280250109911,0.016568161999806222,1.0,0.008353280250109911
+02-28-2018.csv,Benign,rates_and_ratios,XGBoost,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,XGBoost,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,rates_and_ratios,LightGBM,0.9999814356435643,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,LightGBM,0.005959650236920522,0.011848686446850871,1.0,0.005959650236920522
+02-28-2018.csv,Benign,rates_and_ratios,CatBoost,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,CatBoost,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,rates_and_ratios,KNN,0.9570111386138613,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,KNN,0.09276537540911534,0.16978095663835494,1.0,0.09276537540911534
+02-28-2018.csv,Benign,rates_and_ratios,LinearSVC,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,rates_and_ratios,MLP,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,rates_and_ratios,MLP,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,connection_activity,LogisticRegression,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,connection_activity,DecisionTree,0.9899876237623763,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,DecisionTree,0.037174539592594404,0.07168425018839487,1.0,0.037174539592594404
+02-28-2018.csv,Benign,connection_activity,RandomForest,0.9898143564356435,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,RandomForest,0.027111523618777784,0.052791781603728716,1.0,0.027111523618777784
+02-28-2018.csv,Benign,connection_activity,ExtraTrees,0.9860334158415841,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,ExtraTrees,0.020663377460798202,0.0404900928496219,1.0,0.020663377460798202
+02-28-2018.csv,Benign,connection_activity,XGBoost,0.999684405940594,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,XGBoost,0.007669385960627229,0.015222028311033546,1.0,0.007669385960627229
+02-28-2018.csv,Benign,connection_activity,LightGBM,0.9993626237623763,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,LightGBM,0.012652044355429631,0.024987940183309215,1.0,0.012652044355429631
+02-28-2018.csv,Benign,connection_activity,CatBoost,0.9998081683168317,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,CatBoost,0.00849982902642763,0.016856381690481956,1.0,0.00849982902642763
+02-28-2018.csv,Benign,connection_activity,KNN,0.9782487623762376,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,KNN,0.03868887694787748,0.07449560269011898,1.0,0.03868887694787748
+02-28-2018.csv,Benign,connection_activity,LinearSVC,1.0,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,LinearSVC,0.0,0.0,0.0,0.0
+02-28-2018.csv,Benign,connection_activity,MLP,0.9988366336633664,0.0,0.0,0.0
+02-28-2018.csv,Infilteration,connection_activity,MLP,0.0008792926579063065,0.001757040363121675,1.0,0.0008792926579063065
+03-01-2018.csv,Benign,flow_metrics,LogisticRegression,1.0,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,LogisticRegression,0.0,0.0,0.0,0.0
+03-01-2018.csv,Benign,flow_metrics,DecisionTree,0.9478751378403597,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,DecisionTree,0.27423253129396485,0.43042776661099,1.0,0.27423253129396485
+03-01-2018.csv,Benign,flow_metrics,RandomForest,0.9106087595781378,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,RandomForest,0.315717326214783,0.47991665067310063,1.0,0.315717326214783
+03-01-2018.csv,Benign,flow_metrics,ExtraTrees,0.8942234286198999,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,ExtraTrees,0.32625085675119947,0.49198966408268735,1.0,0.32625085675119947
+03-01-2018.csv,Benign,flow_metrics,XGBoost,0.988760709135635,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,XGBoost,0.22621839038995709,0.3689691692162862,1.0,0.22621839038995709
+03-01-2018.csv,Benign,flow_metrics,LightGBM,0.9879831481324398,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,LightGBM,0.23397424335341438,0.3792206273569737,1.0,0.23397424335341438
+03-01-2018.csv,Benign,flow_metrics,CatBoost,0.989114145955269,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,CatBoost,0.22542476822625446,0.36791286429202236,1.0,0.22542476822625446
+03-01-2018.csv,Benign,flow_metrics,KNN,0.869779738174004,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,KNN,0.3447566826593557,0.5127420998980632,1.0,0.3447566826593557
+03-01-2018.csv,Benign,flow_metrics,LinearSVC,1.0,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+03-01-2018.csv,Benign,flow_metrics,MLP,0.4093929369185964,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flow_metrics,MLP,0.7014176977742506,0.8245096999893989,1.0,0.7014176977742506
+03-01-2018.csv,Benign,packet_size_stats,LogisticRegression,0.9992365764695903,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,LogisticRegression,0.00010822120414126474,0.0002164189871591401,1.0,0.00010822120414126474
+03-01-2018.csv,Benign,packet_size_stats,DecisionTree,0.8814572906947155,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,DecisionTree,0.3437826918220843,0.5116641163995598,1.0,0.3437826918220843
+03-01-2018.csv,Benign,packet_size_stats,RandomForest,0.8751378403596574,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,RandomForest,0.3539194112766495,0.5228072045188106,1.0,0.3539194112766495
+03-01-2018.csv,Benign,packet_size_stats,ExtraTrees,0.8743320044108915,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,ExtraTrees,0.3540637062155045,0.522964620630861,1.0,0.3540637062155045
+03-01-2018.csv,Benign,packet_size_stats,XGBoost,0.8874939915740662,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,XGBoost,0.3357021752462032,0.5026602209198693,1.0,0.3357021752462032
+03-01-2018.csv,Benign,packet_size_stats,LightGBM,0.8863064438600956,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,LightGBM,0.3386962952274449,0.5060091619509566,1.0,0.3386962952274449
+03-01-2018.csv,Benign,packet_size_stats,CatBoost,0.8867588429892272,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,CatBoost,0.3363154287363371,0.5033473706943095,1.0,0.3363154287363371
+03-01-2018.csv,Benign,packet_size_stats,KNN,0.8124805609749202,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,KNN,0.20872262905378594,0.3453606709045871,1.0,0.20872262905378594
+03-01-2018.csv,Benign,packet_size_stats,LinearSVC,0.9999434501088585,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,LinearSVC,0.0020201291439702752,0.004032112899161176,1.0,0.0020201291439702752
+03-01-2018.csv,Benign,packet_size_stats,MLP,0.948511324115701,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,packet_size_stats,MLP,0.0671332203022979,0.12581975525657493,1.0,0.0671332203022979
+03-01-2018.csv,Benign,timing_iat,LogisticRegression,0.9912913167642152,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,LogisticRegression,0.02348400129865445,0.04589031439447343,1.0,0.02348400129865445
+03-01-2018.csv,Benign,timing_iat,DecisionTree,0.9711595555178556,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,DecisionTree,0.08498971898560657,0.15666456096020215,1.0,0.08498971898560657
+03-01-2018.csv,Benign,timing_iat,RandomForest,0.9587609918850907,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,RandomForest,0.10288229140362902,0.1865698492133582,1.0,0.10288229140362902
+03-01-2018.csv,Benign,timing_iat,ExtraTrees,0.946956202109311,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,ExtraTrees,0.11482269759388189,0.20599275174734663,1.0,0.11482269759388189
+03-01-2018.csv,Benign,timing_iat,XGBoost,0.9959849577289563,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,XGBoost,0.053425201111071026,0.10143140880761592,1.0,0.053425201111071026
+03-01-2018.csv,Benign,timing_iat,LightGBM,0.9951225718890491,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,LightGBM,0.058691966379279245,0.11087637999182227,1.0,0.058691966379279245
+03-01-2018.csv,Benign,timing_iat,CatBoost,0.9964514943308734,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,CatBoost,0.05227084160023087,0.09934864586904354,1.0,0.05227084160023087
+03-01-2018.csv,Benign,timing_iat,KNN,0.9179743828993129,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,KNN,0.1342664406045958,0.2367458575835639,1.0,0.1342664406045958
+03-01-2018.csv,Benign,timing_iat,LinearSVC,0.9915457912743518,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,LinearSVC,0.02319541142094441,0.04533916231843182,1.0,0.02319541142094441
+03-01-2018.csv,Benign,timing_iat,MLP,1.0,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,timing_iat,MLP,0.0,0.0,0.0,0.0
+03-01-2018.csv,Benign,flags_and_protocol,LogisticRegression,1.0,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+03-01-2018.csv,Benign,flags_and_protocol,DecisionTree,0.9301184720219413,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,DecisionTree,0.370765845387973,0.5409616042527435,1.0,0.370765845387973
+03-01-2018.csv,Benign,flags_and_protocol,RandomForest,0.9273758023015806,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,RandomForest,0.38090256484253815,0.5516718913270637,1.0,0.38090256484253815
+03-01-2018.csv,Benign,flags_and_protocol,ExtraTrees,0.9276868267028586,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,ExtraTrees,0.38003679520940803,0.5507632789627771,1.0,0.38003679520940803
+03-01-2018.csv,Benign,flags_and_protocol,XGBoost,0.9349959001328922,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,XGBoost,0.356192056563616,0.525282617369331,1.0,0.356192056563616
+03-01-2018.csv,Benign,flags_and_protocol,LightGBM,0.936961008850058,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,LightGBM,0.359727282565564,0.5291168121401851,1.0,0.359727282565564
+03-01-2018.csv,Benign,flags_and_protocol,CatBoost,0.9361975853196483,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,CatBoost,0.3554345081346272,0.5244584020865493,1.0,0.3554345081346272
+03-01-2018.csv,Benign,flags_and_protocol,KNN,0.9072299035824356,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,KNN,0.3644890155477797,0.5342498347653668,1.0,0.3644890155477797
+03-01-2018.csv,Benign,flags_and_protocol,LinearSVC,1.0,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,LinearSVC,0.0,0.0,0.0,0.0
+03-01-2018.csv,Benign,flags_and_protocol,MLP,0.9499533463398083,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,flags_and_protocol,MLP,0.23105227084160024,0.375373615425189,1.0,0.23105227084160024
+03-01-2018.csv,Benign,rates_and_ratios,LogisticRegression,1.0,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+03-01-2018.csv,Benign,rates_and_ratios,DecisionTree,0.9397743659343456,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,DecisionTree,0.20479059196998664,0.33996047667525003,1.0,0.20479059196998664
+03-01-2018.csv,Benign,rates_and_ratios,RandomForest,0.8534368196341222,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,RandomForest,0.28289022762526606,0.4410201614037061,1.0,0.28289022762526606
+03-01-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.8560098396810586,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,ExtraTrees,0.2788499693373255,0.43609489154043607,1.0,0.2788499693373255
+03-01-2018.csv,Benign,rates_and_ratios,XGBoost,0.9565272711850029,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,XGBoost,0.18549114389812776,0.3129355201898792,1.0,0.18549114389812776
+03-01-2018.csv,Benign,rates_and_ratios,LightGBM,0.955792122600164,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,LightGBM,0.19054146675805347,0.3200921128382268,1.0,0.19054146675805347
+03-01-2018.csv,Benign,rates_and_ratios,CatBoost,0.9550711114881104,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,CatBoost,0.18697016702139171,0.3150376853877948,1.0,0.18697016702139171
+03-01-2018.csv,Benign,rates_and_ratios,KNN,0.8682953035315407,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,KNN,0.27354713033440353,0.42958305007931114,1.0,0.27354713033440353
+03-01-2018.csv,Benign,rates_and_ratios,LinearSVC,1.0,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+03-01-2018.csv,Benign,rates_and_ratios,MLP,0.9957870331099613,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,rates_and_ratios,MLP,0.030410158363695393,0.05902534659011343,1.0,0.030410158363695393
+03-01-2018.csv,Benign,connection_activity,LogisticRegression,0.908445726241977,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,LogisticRegression,0.06222719238122723,0.11716362154452217,1.0,0.06222719238122723
+03-01-2018.csv,Benign,connection_activity,DecisionTree,0.8707552237961942,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,DecisionTree,0.3609177158111179,0.5304034352966124,1.0,0.3609177158111179
+03-01-2018.csv,Benign,connection_activity,RandomForest,0.8758871264172816,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,RandomForest,0.36138667436239674,0.5309096690426349,1.0,0.36138667436239674
+03-01-2018.csv,Benign,connection_activity,ExtraTrees,0.8722537959114429,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,ExtraTrees,0.36582374373218857,0.5356822143574032,1.0,0.36582374373218857
+03-01-2018.csv,Benign,connection_activity,XGBoost,0.8869567676082224,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,XGBoost,0.3388405901662999,0.5061701783693485,1.0,0.3388405901662999
+03-01-2018.csv,Benign,connection_activity,LightGBM,0.8862357564961687,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,LightGBM,0.34215937375996536,0.5098640004300382,1.0,0.34215937375996536
+03-01-2018.csv,Benign,connection_activity,CatBoost,0.8875505414652077,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,CatBoost,0.33306879261209915,0.4997023326297559,1.0,0.33306879261209915
+03-01-2018.csv,Benign,connection_activity,KNN,0.7769530918652982,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,KNN,0.43613145268929693,0.6073698224108914,1.0,0.43613145268929693
+03-01-2018.csv,Benign,connection_activity,LinearSVC,0.9053354822291967,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,LinearSVC,0.06251578225893727,0.1176750186731853,1.0,0.06251578225893727
+03-01-2018.csv,Benign,connection_activity,MLP,0.9999151751632878,0.0,0.0,0.0
+03-01-2018.csv,Infilteration,connection_activity,MLP,0.00032466361242379423,0.0006491164803461955,1.0,0.00032466361242379423
+03-02-2018.csv,Benign,flow_metrics,LogisticRegression,1.0,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,LogisticRegression,0.0,0.0,0.0,0.0
+03-02-2018.csv,Benign,flow_metrics,DecisionTree,0.998210996874739,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,DecisionTree,0.9989866871658688,0.9994930867520845,1.0,0.9989866871658688
+03-02-2018.csv,Benign,flow_metrics,RandomForest,0.9983164909165234,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,RandomForest,0.9989168035221356,0.999458108273463,1.0,0.9989168035221356
+03-02-2018.csv,Benign,flow_metrics,ExtraTrees,0.998224183629962,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,ExtraTrees,0.9990099817137799,0.9995047457014841,1.0,0.9990099817137799
+03-02-2018.csv,Benign,flow_metrics,XGBoost,0.998298908576226,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,XGBoost,0.9991264544533351,0.9995630363728524,1.0,0.9991264544533351
+03-02-2018.csv,Benign,flow_metrics,LightGBM,0.9983164909165234,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,LightGBM,0.9993011635626682,0.9996504596455661,1.0,0.9993011635626682
+03-02-2018.csv,Benign,flow_metrics,CatBoost,0.9983164909165234,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,CatBoost,0.9989750398919133,0.9994872571754863,1.0,0.9989750398919133
+03-02-2018.csv,Benign,flow_metrics,KNN,0.998360446767267,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,KNN,0.9990216289877354,0.9995105750742878,1.0,0.9990216289877354
+03-02-2018.csv,Benign,flow_metrics,LinearSVC,0.9999824176597026,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,LinearSVC,0.0,0.0,0.0,0.0
+03-02-2018.csv,Benign,flow_metrics,MLP,0.9988351699552969,0.0,0.0,0.0
+03-02-2018.csv,Bot,flow_metrics,MLP,0.9773111103346261,0.9885253819963951,1.0,0.9773111103346261
+03-02-2018.csv,Benign,packet_size_stats,LogisticRegression,1.0,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,LogisticRegression,0.0,0.0,0.0,0.0
+03-02-2018.csv,Benign,packet_size_stats,DecisionTree,0.834809517320803,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,DecisionTree,0.9992778690147571,0.9996388040920001,1.0,0.9992778690147571
+03-02-2018.csv,Benign,packet_size_stats,RandomForest,0.8348446820013978,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,RandomForest,0.9991264544533351,0.9995630363728524,1.0,0.9991264544533351
+03-02-2018.csv,Benign,packet_size_stats,ExtraTrees,0.8348446820013978,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,ExtraTrees,0.9991148071793796,0.9995572076113681,1.0,0.9991148071793796
+03-02-2018.csv,Benign,packet_size_stats,XGBoost,0.8348930334372157,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,XGBoost,0.9988352726044469,0.9994172969571247,1.0,0.9988352726044469
+03-02-2018.csv,Benign,packet_size_stats,LightGBM,0.8348446820013978,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,LightGBM,0.9991264544533351,0.9995630363728524,1.0,0.9991264544533351
+03-02-2018.csv,Benign,packet_size_stats,CatBoost,0.8348270996611004,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,CatBoost,0.9992429271928905,0.9996213202523755,1.0,0.9992429271928905
+03-02-2018.csv,Benign,packet_size_stats,KNN,0.8345985292372341,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,KNN,0.9991031599054241,0.9995513787819643,1.0,0.9991031599054241
+03-02-2018.csv,Benign,packet_size_stats,LinearSVC,0.9902374055498657,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,LinearSVC,0.49629034324516347,0.6633610187830338,1.0,0.49629034324516347
+03-02-2018.csv,Benign,packet_size_stats,MLP,0.8346732541834981,0.0,0.0,0.0
+03-02-2018.csv,Bot,packet_size_stats,MLP,0.9986139743992919,0.9993065065998427,1.0,0.9986139743992919
+03-02-2018.csv,Benign,timing_iat,LogisticRegression,0.999837363352249,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,LogisticRegression,0.00020965093119955274,0.00041921397379912666,1.0,0.00020965093119955274
+03-02-2018.csv,Benign,timing_iat,DecisionTree,0.9976571531553707,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,DecisionTree,0.9986023271253364,0.9993006748487709,1.0,0.9986023271253364
+03-02-2018.csv,Benign,timing_iat,RandomForest,0.9976967134210399,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,RandomForest,0.9989051562481801,0.9994522782892437,1.0,0.9989051562481801
+03-02-2018.csv,Benign,timing_iat,ExtraTrees,0.9976395708150734,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,ExtraTrees,0.9988003307825803,0.9993998053737814,1.0,0.9988003307825803
+03-02-2018.csv,Benign,timing_iat,XGBoost,0.9976923178359656,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,XGBoost,0.9991148071793796,0.9995572076113681,1.0,0.9991148071793796
+03-02-2018.csv,Benign,timing_iat,LightGBM,0.9873582973261656,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,LightGBM,0.9974608942776944,0.9987288333255586,1.0,0.9974608942776944
+03-02-2018.csv,Benign,timing_iat,CatBoost,0.9978637456538653,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,CatBoost,0.9983693816462257,0.999184025551657,1.0,0.9983693816462257
+03-02-2018.csv,Benign,timing_iat,KNN,0.9976439664001477,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,KNN,0.998660563495114,0.9993298329244343,1.0,0.998660563495114
+03-02-2018.csv,Benign,timing_iat,LinearSVC,0.9998989015432899,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,LinearSVC,0.000640600067554189,0.0012803799236427973,1.0,0.000640600067554189
+03-02-2018.csv,Benign,timing_iat,MLP,0.9852396253203283,0.0,0.0,0.0
+03-02-2018.csv,Bot,timing_iat,MLP,0.9481579836239328,0.9733892133944746,1.0,0.9481579836239328
+03-02-2018.csv,Benign,flags_and_protocol,LogisticRegression,1.0,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,LogisticRegression,0.0,0.0,0.0,0.0
+03-02-2018.csv,Benign,flags_and_protocol,DecisionTree,0.9999912088298513,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,DecisionTree,0.9990915126314686,0.9995455498846396,1.0,0.9990915126314686
+03-02-2018.csv,Benign,flags_and_protocol,RandomForest,0.9999912088298513,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,RandomForest,0.9990915126314686,0.9995455498846396,1.0,0.9990915126314686
+03-02-2018.csv,Benign,flags_and_protocol,ExtraTrees,0.9999956044149256,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,ExtraTrees,0.9990682180835575,0.999533891886223,1.0,0.9990682180835575
+03-02-2018.csv,Benign,flags_and_protocol,XGBoost,0.9999296706388103,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,XGBoost,0.9990915126314686,0.9995455498846396,1.0,0.9990915126314686
+03-02-2018.csv,Benign,flags_and_protocol,LightGBM,0.9999912088298513,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,LightGBM,0.9990915126314686,0.9995455498846396,1.0,0.9990915126314686
+03-02-2018.csv,Benign,flags_and_protocol,CatBoost,0.9999604397343308,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,CatBoost,0.9990915126314686,0.9995455498846396,1.0,0.9990915126314686
+03-02-2018.csv,Benign,flags_and_protocol,KNN,0.9999736264895539,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,KNN,0.9990915126314686,0.9995455498846396,1.0,0.9990915126314686
+03-02-2018.csv,Benign,flags_and_protocol,LinearSVC,0.9824572199682639,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,LinearSVC,0.0009084873685313952,0.0018153255367428871,1.0,0.0009084873685313952
+03-02-2018.csv,Benign,flags_and_protocol,MLP,0.998448358468754,0.0,0.0,0.0
+03-02-2018.csv,Bot,flags_and_protocol,MLP,0.9989983344398243,0.99949891626075,1.0,0.9989983344398243
+03-02-2018.csv,Benign,rates_and_ratios,LogisticRegression,1.0,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,LogisticRegression,0.0,0.0,0.0,0.0
+03-02-2018.csv,Benign,rates_and_ratios,DecisionTree,0.9921187159616881,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,DecisionTree,0.9944791921450784,0.9972319551506658,1.0,0.9944791921450784
+03-02-2018.csv,Benign,rates_and_ratios,RandomForest,0.9949802418450908,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,RandomForest,0.9948519049116554,0.9974193096361343,1.0,0.9948519049116554
+03-02-2018.csv,Benign,rates_and_ratios,ExtraTrees,0.9949538683346447,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,ExtraTrees,0.9948519049116554,0.9974193096361343,1.0,0.9948519049116554
+03-02-2018.csv,Benign,rates_and_ratios,XGBoost,0.9905011406543268,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,XGBoost,0.9913577227249962,0.9956601080878741,1.0,0.9913577227249962
+03-02-2018.csv,Benign,rates_and_ratios,LightGBM,0.9886286214126532,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,LightGBM,0.9945490757888116,0.9972670894502645,1.0,0.9945490757888116
+03-02-2018.csv,Benign,rates_and_ratios,CatBoost,0.9907297110781931,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,CatBoost,0.9898785189326438,0.9949135181012029,1.0,0.9898785189326438
+03-02-2018.csv,Benign,rates_and_ratios,KNN,0.9949978241853882,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,KNN,0.9930931665443703,0.9965346158566161,1.0,0.9930931665443703
+03-02-2018.csv,Benign,rates_and_ratios,LinearSVC,1.0,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,LinearSVC,0.0,0.0,0.0,0.0
+03-02-2018.csv,Benign,rates_and_ratios,MLP,0.9909758638423567,0.0,0.0,0.0
+03-02-2018.csv,Bot,rates_and_ratios,MLP,0.9858951512398523,0.9928974856747389,1.0,0.9858951512398523
+03-02-2018.csv,Benign,connection_activity,LogisticRegression,1.0,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,LogisticRegression,0.0,0.0,0.0,0.0
+03-02-2018.csv,Benign,connection_activity,DecisionTree,0.878787345989688,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,DecisionTree,0.9995457563157343,0.9997728265618174,1.0,0.9995457563157343
+03-02-2018.csv,Benign,connection_activity,RandomForest,0.8787961371598366,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,RandomForest,0.9995574035896898,0.9997786528111093,1.0,0.9995574035896898
+03-02-2018.csv,Benign,connection_activity,ExtraTrees,0.878787345989688,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,ExtraTrees,0.9995457563157343,0.9997728265618174,1.0,0.9995457563157343
+03-02-2018.csv,Benign,connection_activity,XGBoost,0.8787961371598366,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,XGBoost,0.9995224617678232,0.9997611738596052,1.0,0.9995224617678232
+03-02-2018.csv,Benign,connection_activity,LightGBM,0.8787917415747624,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,LightGBM,0.9995574035896898,0.9997786528111093,1.0,0.9995574035896898
+03-02-2018.csv,Benign,connection_activity,CatBoost,0.8787961371598366,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,CatBoost,0.9995574035896898,0.9997786528111093,1.0,0.9995574035896898
+03-02-2018.csv,Benign,connection_activity,KNN,0.8785851490762678,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,KNN,0.9996156399594675,0.9998077830394744,1.0,0.9996156399594675
+03-02-2018.csv,Benign,connection_activity,LinearSVC,0.9999956044149256,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,LinearSVC,0.0,0.0,0.0,0.0
+03-02-2018.csv,Benign,connection_activity,MLP,0.8785719623210447,0.0,0.0,0.0
+03-02-2018.csv,Bot,connection_activity,MLP,0.998509148933692,0.999254018393109,1.0,0.998509148933692
