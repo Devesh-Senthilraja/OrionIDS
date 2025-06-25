@@ -295,8 +295,8 @@ def plot_per_port_performance():
 if __name__ == "__main__":
     # plot_cross_day_trend()
     # plot_feature_correlation()
-    plot_pca_tsne()
+    # plot_pca_tsne()
     # plot_shap_summary()
-    # plot_all_confusion_matrices()
-    # plot_per_port_performance()
+    plot_all_confusion_matrices()
+    plot_per_port_performance()
     print("[DONE] All plots generated and saved to:", PLOTS_DIR.resolve())
