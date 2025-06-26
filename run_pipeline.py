@@ -4,7 +4,7 @@ from pipeline.config_parser import load_config
 from pipeline.data_loader   import prepare_experiments
 from pipeline.trainer       import run_training
 from pipeline.evaluator     import run_evaluation
-from pipeline.plotter       import run_plots
+from pipeline.plotter       import plot_confusion_heatmaps, plot_shap_summary
 
 def main(config_path="exp_config.yaml"):
     # 1. Load and validate config
