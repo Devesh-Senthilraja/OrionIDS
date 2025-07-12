@@ -1,0 +1,8 @@
+cleaned/
+raw/
+raw/CIC-IDS2018/
+results/
+results/ablation_study/
+results/base_re_evaluation/
+results/meta_feature_selection/
+results/meta_re_evaluation
