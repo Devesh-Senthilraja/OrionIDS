@@ -1,3 +1,9 @@
-*.csv
 .venv/
 catboost_info/
+
+cleaned/
+raw/
+results/
+
+*.zip
+*.tar.xz

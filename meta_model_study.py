@@ -37,10 +37,11 @@ logger = logging.getLogger("MetaModelStudy")
 CLEAN_DIR      = Path("cleaned/CIC-IDS2018")              # cleaned per-day CSVs
 META_DIR       = Path("results/meta_re_evaluation")       # meta eval outputs
 BASE_PRED_DIR  = META_DIR / "base_predictions"            # where we cache base preds
+META_PRED_DIR = META_DIR / "meta_predictions"
 ROC_PR_DIR     = META_DIR / "roc_pr_curves"
 CM_DIR         = META_DIR / "confusion_matrices"
 
-for d in (META_DIR, BASE_PRED_DIR, ROC_PR_DIR, CM_DIR):
+for d in (META_DIR, BASE_PRED_DIR, ROC_PR_DIR, CM_DIR, META_PRED_DIR):
     d.mkdir(parents=True, exist_ok=True)
 
 # --- Feature set for base models (flags & protocol features) ---
@@ -100,6 +101,13 @@ def save_metrics_and_artifacts(name, y_true, y_pred, y_scores):
     pd.DataFrame({"fpr":fpr,"tpr":tpr}).to_csv(ROC_PR_DIR/f"{name}_roc.csv", index=False)
     pd.DataFrame({"precision":pr,"recall":re}).to_csv(ROC_PR_DIR/f"{name}_pr.csv", index=False)
     pd.DataFrame(cm).to_csv(CM_DIR/f"{name}_cm.csv", index=False)
+
+    pred_df = pd.DataFrame({
+        "y_true": y_true,
+        "y_pred": y_pred,
+        "y_score": y_scores
+    })
+    pred_df.to_csv(META_PRED_DIR / f"{name}_raw.csv", index=False)
 
     # return dict for summary
     return {
