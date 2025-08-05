@@ -1,10 +1,10 @@
 .venv/
 catboost_info/
 
-data/raw/*
-!data/raw/.gitkeep
-data/cleaned/*
-!data/cleaned/.gitkeep
+data/raw/CIC-IDS2018/*
+!data/raw/CIC-IDS2018/.gitkeep
+data/cleaned/CIC-IDS2018/*
+!data/cleaned/CIC-IDS2018/.gitkeep
 
 results/ablation_study/confusion_matrices/*
 !results/ablation_study/confusion_matrices/.gitkeep
