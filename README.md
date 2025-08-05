@@ -15,7 +15,7 @@ cd ORIONIDS
 python3 -m venv .venv
 source .venv/bin/activate   # Linux/Mac
 # OR
-.\.venv\Scriptsctivate    # Windows
+.\.venv\Scripts\activate    # Windows
 ```
 
 ### 3) Install dependencies
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ## Data
 
-This project uses the **CIC-IDS-2018** dataset. Download the raw CSVs from Kaggle and place them under `data/raw/2018/`:
+This project uses the **CIC-IDS-2018** dataset. Download the raw CSVs from Kaggle and place them under `data/raw/CIC-IDS2018/`:
 
 - Kaggle: https://www.kaggle.com/datasets/solarmainframe/ids-intrusion-csv?resource=download
 
